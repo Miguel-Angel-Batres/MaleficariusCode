@@ -1,20 +1,19 @@
 
     function cambiarRuta(y,x,imagen){
-      var nombreimagen;
       if(y==1){
       if(x==1){
-      nombreimagen= './imagenes/githubrojo.webp';
+      imagen.src= './imagenes/githubrojo.webp';
       }
       if(x==2){
-      nombreimagen = './imagenes/github.webp';
+      imagen.src = './imagenes/github.webp';
       }
       }
       if(y==2){
         if(x==1){
-          nombreimagen = './imagenes/emailrojo.webp';
+          imagen.src = './imagenes/emailrojo.webp';
           }
           if(x==2){
-          nombreimagen = './imagenes/email.webp';
+          imagen.src = './imagenes/email.webp';
           }
       }
 

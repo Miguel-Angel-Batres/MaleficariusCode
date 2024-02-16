@@ -2,18 +2,18 @@
     function cambiarRuta(y,x,imagen){
       if(y==1){
       if(x==1){
-      imagen.src = '/PaginaWeb/imagenes/github2.webp';
+      imagen.src = './imagenes/github2.webp';
       }
       if(x==2){
-      imagen.src = '/PaginaWeb/imagenes/github.webp';
+      imagen.src = './imagenes/github.webp';
       }
       }
       if(y==2){
         if(x==1){
-          imagen.src = '/PaginaWeb/imagenes/email2.webp';
+          imagen.src = './imagenes/email2.webp';
           }
           if(x==2){
-          imagen.src = '/PaginaWeb/imagenes/email1.webp';
+          imagen.src = './imagenes/email1.webp';
           }
       }
 

@@ -25,7 +25,6 @@
         imgelement.src = './imagenes/githubrojo.webp';
         img2element.src = './imagenes/emailrojo.webp';
       }
-      Prism.highlightAll();
 
     /*function moveSnake() {
       snakeX += directionX * 20; // 20 es el ancho del elemento

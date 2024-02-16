@@ -3,37 +3,22 @@
       var nombreimagen;
       if(y==1){
       if(x==1){
-      nombreimagen= 'githubrojo.webp';
+      nombreimagen= './imagenes/githubrojo.webp';
       }
       if(x==2){
-      nombreimagen = 'github.webp';
+      nombreimagen = './imagenes/github.webp';
       }
       }
       if(y==2){
         if(x==1){
-          nombreimagen = 'emailrojo.webp';
+          nombreimagen = './imagenes/emailrojo.webp';
           }
           if(x==2){
-          nombreimagen = 'email.webp';
+          nombreimagen = './imagenes/email.webp';
           }
       }
-      var rutabase = './imagenes/'
-      imagen.src = rutabase + nombreimagen;
-      verificarAccesoRuta(imagen);
+
       }
-      function verificarAccesoRuta(imagen) {
-        var pruebaImagen = new Image();
-        pruebaImagen.onload = function() {
-            // La imagen se cargó con éxito, no es necesario hacer nada aquí
-        };
-        pruebaImagen.onerror = function() {
-            // La imagen no se cargó correctamente, cambia la ruta a tu antojo
-            imagen.src = '../' + imagen.src;
-        };
-        pruebaImagen.src = imagen.src; // Intenta cargar la misma ruta que la imagen actual
-    }
-  
-    
       Prism.highlightAll();
 
     /*function moveSnake() {

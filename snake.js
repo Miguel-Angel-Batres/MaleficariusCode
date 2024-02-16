@@ -1,23 +1,39 @@
 
     function cambiarRuta(y,x,imagen){
+      var nombreimagen;
       if(y==1){
       if(x==1){
-      imagen.src = './imagenes/githubrojo.webp';
+      nombreimagen= 'githubrojo.webp';
       }
       if(x==2){
-      imagen.src = './imagenes/github.webp';
+      nombreimagen = 'github.webp';
       }
       }
       if(y==2){
         if(x==1){
-          imagen.src = './imagenes/emailrojo.webp';
+          nombreimagen = 'emailrojo.webp';
           }
           if(x==2){
-          imagen.src = './imagenes/email.webp';
+          nombreimagen = 'email.webp';
           }
       }
-
+      var rutabase = './imagenes/'
+      imagen.src = rutabase + nombreimagen;
+      verificarAccesoRuta(imagen);
       }
+      function verificarAccesoRuta(imagen) {
+        var pruebaImagen = new Image();
+        pruebaImagen.onload = function() {
+            // La imagen se cargó con éxito, no es necesario hacer nada aquí
+        };
+        pruebaImagen.onerror = function() {
+            // La imagen no se cargó correctamente, cambia la ruta a tu antojo
+            imagen.src = '../' + imagen.src;
+        };
+        pruebaImagen.src = imagen.src; // Intenta cargar la misma ruta que la imagen actual
+    }
+  
+    
       Prism.highlightAll();
 
     /*function moveSnake() {

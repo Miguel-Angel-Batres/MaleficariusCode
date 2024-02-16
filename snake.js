@@ -18,6 +18,13 @@
       }
 
       }
+      var imgelement = document.getElementById('imagen');
+      var img2element = document.getElementById('imagen2');
+
+      if(window.innerWidth < 768){
+        imgelement.src = './imagenes/githubrojo.webp';
+        img2element.src = './imagenes/emailrojo.webp';
+      }
       Prism.highlightAll();
 
     /*function moveSnake() {

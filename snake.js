@@ -25,6 +25,23 @@
         imgelement.src = './imagenes/githubrojo.webp';
         img2element.src = './imagenes/emailrojo.webp';
       }
+      function toggleDropdown() {
+        var dropdownContent = document.getElementById("dropdownContent");
+        if (dropdownContent.style.display === "none") {
+          dropdownContent.style.display = "block";
+          dropdownContent.style.opacity = "1";
+        } else {
+          dropdownContent.style.display = "none";
+          dropdownContent.style.opacity = "0";
+        }
+      }
+      window.onclick = function(event) {
+        var dropdown = document.getElementById("dropdown");
+        var dropdownContent = document.getElementById("dropdownContent");
+        if (!dropdown.contains(event.target)) {
+          dropdownContent.style.display = "none";
+        }
+      }
 
     /*function moveSnake() {
       snakeX += directionX * 20; // 20 es el ancho del elemento

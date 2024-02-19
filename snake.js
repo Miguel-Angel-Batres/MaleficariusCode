@@ -42,7 +42,6 @@
           dropdownContent.style.display = "none";
         }
       }
-      Prism.highlightAll();
     /*function moveSnake() {
       snakeX += directionX * 20; // 20 es el ancho del elemento
       //snakeY += directionY * 20; // 20 es la altura del elemento

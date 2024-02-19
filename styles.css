@@ -116,12 +116,13 @@ a{
   color:#BFBFBF;
 }
 .titulo{
+  display:inline-block;
   font-size: 2em;
   text-align: center;
   color:  #e0e0d8;
-  width: 50%;
   margin: 10px auto 5rem auto;
 }
+
 .a_blog:hover h1{
   color:#17757c;
 }
@@ -159,6 +160,9 @@ ul{
     align-items: center;
     text-align: center;
     height: auto;
+  }
+  .titulo{
+    font-size: 1.6em;
   }
   .navbar .logo{
     margin-left: 0px !important;
@@ -282,10 +286,10 @@ footer{
 .centrado{
   text-align: center;  
 }
-.cuadro h1,.piedepagina h1{
+.cuadro h1,.centrar h1{
   color: #e0e0d8;
 }
-.cuadro p,.piedepagina p{
+.cuadro p,.centrar p{
   margin-top: 10px;
   color: #BFBFBF;
 }

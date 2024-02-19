@@ -50,6 +50,7 @@
 }
 .dropdown-content a:hover {
   background-color: #17757c;
+  
 }
 
 body{
@@ -114,6 +115,7 @@ a{
 .a_blog{
   text-decoration: none;
   color:#BFBFBF;
+  transition: color 0.5s ease;
 }
 .titulo{
   display:inline-block;

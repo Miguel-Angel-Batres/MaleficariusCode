@@ -1,12 +1,25 @@
 document.addEventListener('DOMContentLoaded', function () {
     var movingGif = document.querySelector('.moving-gif');
-    var direction = 100; // Dirección de movimiento, 1 para derecha, -1 para izquierda
+    var direction = 0;
+    if(window.innerWidth < 768){
+      direction = 50;
+    }else{
+      direction = 100;
+    }
     movingGif.style.float = 'right';
     movingGif.style.transform = "scaleX(-1)";
     var arriba = false;
 
     function moverGif() {
       var limiteDerecho = window.innerWidth;
+      var limiteizquierdo = 0;
+      var gifwidth = parseInt(getComputedStyle(movingGif).width);
+
+      if(window.innerWidth < 768){
+        limiteDerecho = window.innerWidth + (gifwidth*2);
+        limiteizquierdo = 0 - (gifwidth*2);
+      }
+
       // Cambiar la dirección si alcanza los límites
       var leftValue = parseInt(getComputedStyle(movingGif).left);
       var gifheight = parseInt(getComputedStyle(movingGif).height);
@@ -16,6 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
       if(parseInt(movingGif.style.top) >= window.innerHeight - gifheight){
         arriba = true;
       }
+
       if (parseInt(movingGif.style.left) >= limiteDerecho) {
         direction *= -1;
         if(arriba){
@@ -25,8 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         movingGif.style.transform = "scaleX(1)";
       }
-      var gifwidth = parseInt(getComputedStyle(movingGif).width);
-      if(parseInt(movingGif.style.left) <= (0-gifwidth)){
+      if(parseInt(movingGif.style.left) <= limiteizquierdo){
         direction *= -1;
         if(arriba){
             movingGif.style.top = parseInt(getComputedStyle(movingGif).top)- 50 + 'px';

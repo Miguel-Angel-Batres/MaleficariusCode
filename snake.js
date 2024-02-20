@@ -15,10 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
       var limiteizquierdo = 0;
       var gifwidth = parseInt(getComputedStyle(movingGif).width);
 
-      if(window.innerWidth < 768){
-        limiteDerecho = window.innerWidth + (gifwidth*2);
-        limiteizquierdo = 0 - (gifwidth*2);
-      }
+      
 
       // Cambiar la dirección si alcanza los límites
       var leftValue = parseInt(getComputedStyle(movingGif).left);

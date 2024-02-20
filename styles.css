@@ -98,7 +98,7 @@ a{
   display:flex;
   justify-content: space-between;
   width: calc(100%);
-  height: 100% auto;
+  height: auto;
   display:flex;
   padding: 0px;
   top: 0px;
@@ -274,6 +274,16 @@ footer{
 }
 .contact_image:hover{
   transform: scale(1.5);
+}
+.w3c{
+  width: auto;
+  height: 2.5em;
+  margin: 0px 0px 0px 10px;
+  transition: transform 0.3s;
+}
+.w3c:hover{
+
+  transform: scale(1.25);
 }
 .imagencentrada{
   padding:20px 0px 10px 0px;

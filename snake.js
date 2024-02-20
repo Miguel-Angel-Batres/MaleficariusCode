@@ -27,19 +27,27 @@
       }
       function toggleDropdown() {
         var dropdownContent = document.getElementById("dropdownContent");
-        if (dropdownContent.style.display === "none") {
+        if (dropdownContent.style.display === "none" || dropdownContent.style.display === "") {
           dropdownContent.style.display = "block";
-          dropdownContent.style.opacity = "1";
+          setTimeout(function() {
+            dropdownContent.style.opacity = "1";
+          }, 0);
         } else {
-          dropdownContent.style.display = "none";
           dropdownContent.style.opacity = "0";
+          setTimeout(function() {
+            dropdownContent.style.display = "none";
+          }, 300);
         }
       }
+    
       window.onclick = function(event) {
         var dropdown = document.getElementById("dropdown");
         var dropdownContent = document.getElementById("dropdownContent");
-        if (!dropdown.contains(event.target)) {
-          dropdownContent.style.display = "none";
+        if (!dropdown.contains(event.target) && event.target !== dropdownContent) {
+          dropdownContent.style.opacity = "0";
+          setTimeout(function() {
+            dropdownContent.style.display = "none";
+          }, 300);
         }
       }
       const sonidoClicBoton = document.getElementById('sonidoClicBoton');

@@ -166,6 +166,7 @@ ul{
   .cuadro{
     min-width: calc(70% + 2rem) !important;
     max-width: calc(70% + 2rem) !important;
+    text-align: center;
   }
   .navbar {
     flex-direction: column; 

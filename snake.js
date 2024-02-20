@@ -53,8 +53,9 @@
       const sonidoClicBoton = document.getElementById('sonidoClicBoton');
       
       document.body.addEventListener('click', (event) => {
-
-              sonidoClicBoton.play();
+        if (sonidoClicBoton !== null) {
+          sonidoClicBoton.play();
+          }  
           
       });
 

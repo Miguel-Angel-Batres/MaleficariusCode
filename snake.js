@@ -42,11 +42,13 @@
           dropdownContent.style.display = "none";
         }
       }
-      const sonidoClic = document.getElementById('sonidoClic');
+      const sonidoClicBoton = document.getElementById('sonidoClicBoton');
+      
+      document.body.addEventListener('click', (event) => {
 
-    document.body.addEventListener('click', () => {
-    sonidoClic.play();
-    });
+              sonidoClicBoton.play();
+          
+      });
 
 
 

@@ -1,91 +1,45 @@
+document.addEventListener('DOMContentLoaded', function () {
+    var movingGif = document.querySelector('.moving-gif');
+    var direction = 100; // Dirección de movimiento, 1 para derecha, -1 para izquierda
+    movingGif.style.float = 'right';
+    movingGif.style.transform = "scaleX(-1)";
+    var arriba = false;
 
-    function cambiarRuta(y,x,imagen){
-      if(y==1){
-      if(x==1){
-      imagen.src= './imagenes/githubrojo.webp';
+    function moverGif() {
+      var limiteDerecho = window.innerWidth;
+      // Cambiar la dirección si alcanza los límites
+      var leftValue = parseInt(getComputedStyle(movingGif).left);
+      var gifheight = parseInt(getComputedStyle(movingGif).height);
+      if(parseInt(movingGif.style.top) <= 0 + (gifheight/2)){
+        arriba = false;
       }
-      if(x==2){
-      imagen.src = './imagenes/github.webp';
+      if(parseInt(movingGif.style.top) >= window.innerHeight - gifheight){
+        arriba = true;
       }
-      }
-      if(y==2){
-        if(x==1){
-          imagen.src = './imagenes/emailrojo.webp';
-          }
-          if(x==2){
-          imagen.src = './imagenes/email.webp';
-          }
-      }
-
-      }
-      var imgelement = document.getElementById('imagen');
-      var img2element = document.getElementById('imagen2');
-
-      if(window.innerWidth < 768){
-        imgelement.src = './imagenes/githubrojo.webp';
-        img2element.src = './imagenes/emailrojo.webp';
-      }
-      function toggleDropdown() {
-        var dropdownContent = document.getElementById("dropdownContent");
-        if (dropdownContent.style.display === "none" || dropdownContent.style.display === "") {
-          dropdownContent.style.display = "block";
-          setTimeout(function() {
-            dropdownContent.style.opacity = "1";
-          }, 0);
-        } else {
-          dropdownContent.style.opacity = "0";
-          setTimeout(function() {
-            dropdownContent.style.display = "none";
-          }, 300);
+      if (parseInt(movingGif.style.left) >= limiteDerecho) {
+        direction *= -1;
+        if(arriba){
+          movingGif.style.top = parseInt(getComputedStyle(movingGif).top)- 50 + 'px';
+        }else{
+          movingGif.style.top = parseInt(getComputedStyle(movingGif).top)+ 50 + 'px';
         }
+        movingGif.style.transform = "scaleX(1)";
+      }
+      var gifwidth = parseInt(getComputedStyle(movingGif).width);
+      if(parseInt(movingGif.style.left) <= (0-gifwidth)){
+        direction *= -1;
+        if(arriba){
+            movingGif.style.top = parseInt(getComputedStyle(movingGif).top)- 50 + 'px';
+          }else{
+            movingGif.style.top = parseInt(getComputedStyle(movingGif).top)+ 50 + 'px';
+          }    
+        movingGif.style.transform = "scaleX(-1)";
       }
     
-      window.onclick = function(event) {
-        var dropdown = document.getElementById("dropdown");
-        var dropdownContent = document.getElementById("dropdownContent");
-        if (!dropdown.contains(event.target) && event.target !== dropdownContent) {
-          dropdownContent.style.opacity = "0";
-          setTimeout(function() {
-            dropdownContent.style.display = "none";
-          }, 300);
-        }
-      }
-      const sonidoClicBoton = document.getElementById('sonidoClicBoton');
-      
-      document.body.addEventListener('click', (event) => {
-        if (sonidoClicBoton !== null) {
-          sonidoClicBoton.play();
-          }  
-          
-      });
-
-
-
-    /*function moveSnake() {
-      snakeX += directionX * 20; // 20 es el ancho del elemento
-      //snakeY += directionY * 20; // 20 es la altura del elemento
-  
-      // Limitar la serpiente dentro de la pantalla
-      if (snakeX < 0) snakeX = 0;
-      if (snakeY < 0) snakeY = 0;
-      if (snakeX > window.innerWidth - 20) snakeX = window.innerWidth - 20;
-      if (snakeY > window.innerHeight - 20) {snakeY = window.innerHeight-20; cambio = -20;}
-      if (snakeY <= 0) cambio = 20;
-      if(snakeX == window.innerWidth -20){
-        snakeY +=cambio;
-        directionX = -1;
-      }
-      if(snakeX==0){
-        snakeY +=cambio;
-        directionX=1;
-      }
-  
-      // Actualizar la posición de la serpiente en el DOM
-      snakeElement.style.left = snakeX + "px";
-      snakeElement.style.top = snakeY + "px";
+      movingGif.style.left = (leftValue + direction) + 'px'; 
     }
-  
-    // Mover la serpiente automáticamente cada 100 milisegundos
-    setInterval(moveSnake, 50 );*/
 
-  
+    moverGif();
+
+    setInterval(moverGif, 10);
+  });

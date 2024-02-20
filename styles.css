@@ -142,7 +142,7 @@ ul{
   margin-bottom: 5%;
 }
 
-@media screen and (max-width: 670px){
+@media screen and (max-width: 768px){
   .fotoperfil{
     width: calc(80%) !important;
   }

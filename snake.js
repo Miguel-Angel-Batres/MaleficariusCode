@@ -42,6 +42,14 @@
           dropdownContent.style.display = "none";
         }
       }
+      const sonidoClic = document.getElementById('sonidoClic');
+
+    document.body.addEventListener('click', () => {
+    sonidoClic.play();
+    });
+
+
+
     /*function moveSnake() {
       snakeX += directionX * 20; // 20 es el ancho del elemento
       //snakeY += directionY * 20; // 20 es la altura del elemento

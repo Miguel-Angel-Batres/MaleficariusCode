@@ -153,6 +153,9 @@ ul{
   .perfil h1{
     font-size: medium;
   }
+  .w3c{
+    height:2em !important;
+  }
   .cuadro{
     min-width: calc(70% + 2rem) !important;
     max-width: calc(70% + 2rem) !important;
@@ -277,8 +280,7 @@ footer{
 }
 .w3c{
   width: auto;
-  height: 2.5em;
-  margin: 0px 0px 0px 10px;
+  height: 3em;
   transition: transform 0.3s;
 }
 .w3c:hover{

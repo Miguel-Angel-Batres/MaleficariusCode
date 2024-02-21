@@ -12,8 +12,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function moverGif() {
       var limiteDerecho = window.innerWidth;
-      var limiteizquierdo = 0;
-      var gifwidth = parseInt(getComputedStyle(movingGif).width);
+      var limiteizquierdo = 0 - parseInt(getComputedStyle(movingGif).width);
+      
+      if(window.innerWidth < 768){
+        limiteizquierdo = 0;
+      }
 
       
 

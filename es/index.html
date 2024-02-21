@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <base href="../">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maleficarius Code</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="prism.css">
+  <!--<link href="themes/prism-ghcolors.css" rel="stylesheet"/>-->
+  <!-- Icono tomado del sitio web oficial de Gifsanimados.org -->
+  <link rel="icon" href="https://www.gifsanimados.org/data/media/1662/sombrero-de-bruja-y-hechicero-imagen-animada-0016.gif" id="favicon">
+  <script src="snake.js" defer></script> 
+  <script src="dropdown.js" defer></script>
+  <script src="cookies.js" defer></script>
+  <script src="prism.js"></script>
+</head>
+<body>
+  <div class="navbar">  
+    <div class="logo">
+      <!-- Sombrero basado en imágenes de Google -->
+      <a href="/">
+        <img src="./imagenes/logo.webp" alt="Logo" class="logo_imagen">
+      </a>
+    </div>
+
+    <div class="opciones">
+      <!--<p class="lenguage">en</p>
+      <label class="switch">
+        <input type="checkbox" id="checkbox" onchange="cambiarEstadoCheckbox()">
+        <span class="slider round"></span>
+      </label>  -->
+      <div class="dropdown" id="dropdown">
+        <button class="dropbtn" onclick="toggleDropdown()">Menú</button>
+        <div class="dropdown-content" id="dropdownContent">
+          <a href="/">Inicio</a>
+          <a href="./blogs/">Blogs</a>
+          <a href="./proyectos/">Proyectos</a>
+          <a href="./contacto/">Contáctame</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <img src="imagenes/perfil.gif" alt="GIF animado" class="moving-gif">
+  <div class="container">
+    <div class="cuadro">
+    
+    <div class="perfil">
+      <!-- Imagen basada en imágenes de Google -->
+      <img src="/imagenes/perfil.gif" alt="Foto" class="fotoperfil">
+      <h1>Mi Foto</h1>
+    </div>
+    <hr>
+    <h1 class="centrado">Acerca de mí</h1>
+    <hr>
+    <p>Hola, soy Miguel Ángel Batres Luna. Tengo 20 años y soy estudiante de Ingeniería en Sistemas Computacionales en la Universidad Autónoma de Aguascalientes, México. Disfruto programando y editando cosas. Soy fanático de los videojuegos y de la mayoría de las ramas de la programación. En la actualidad, trabajo con varios lenguajes de programación, especialmente C, C++, Java, JavaScript, Python, HTML, CSS, entre otros.</p>
+    <p>Este pequeño fantasma que puedes ver aquí se llama "LostSoul". Tomé su imagen del sitio web oficial de PNGWING, y me representa en este sitio web. Como puedes ver, LostSoul está volando alrededor de este sitio web, buscando algo, pero no parece saber qué está buscando. Estará contigo mientras estés aquí, así que sé amable con él.</p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="cuadro">  
+      <hr>
+      <h1 class="centrado">Habilidades</h1>  
+      <hr>
+      <p>Trabajo en varios proyectos, especializándome en videojuegos, sitios web, programación competitiva y bases de datos. También trabajo con diferentes sistemas operativos, siendo Linux mi entorno principal de programación.</p>
+      <p class="centrado">Lenguajes de Programación:</p>
+      <!-- Imágenes tomadas de Google Images -->
+      <div class="programing_lenguages_images">
+        <img src="/imagenes/c-.png" alt="" class="c_imagen">
+        <img src="/imagenes/html-5.png" alt="" class="c_imagen">
+        <img src="/imagenes/java.png" alt="" class="c_imagen">
+        <img src="/imagenes/secuencia-de-comandos-de-java.png" alt="" class="c_imagen">
+      </div>
+      <p class="centrado">Software de Desarrollo que Utilizo:</p>
+      <div class="programing_lenguages_images">
+        <!-- Imágenes tomadas de Google Images -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Godot_icon.svg/2048px-Godot_icon.svg.png" alt="" class="c_imagen">
+        <img src="https://icons.iconarchive.com/icons/papirus-team/papirus-apps/512/nvim-icon.png" alt="" class="c_imagen">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/56/VSCodium_Logo.png" alt="" class="c_imagen">
+        <img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" alt="" class="c_imagen">
+        <img src="https://static-00.iconduck.com/assets.00/android-studio-icon-486x512-zp9um7zl.png" alt="" class="c_imagen">
+      </div>
+      <p class="centrado">Sistemas Operativos:</p>
+      <div class="programing_lenguages_images">
+        <!-- Imágenes tomadas de Google Images -->
+        <img src="https://cdn1.iconfinder.com/data/icons/operating-system-flat-1/30/windows_7-512.png" alt="" class="c_imagen">
+        <img src="https://cdn.iconscout.com/icon/free/png-256/free-archlinux-3629222-3030532.png" alt="" class="c_imagen">
+        <img src="https://static-00.iconduck.com/assets.00/ubuntu-plain-icon-256x256-we4d4gd0.png" alt="" class="c_imagen">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Finder_Icon_macOS_Big_Sur.png" alt="" class="c_imagen">
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="cuadro">
+      <hr>
+      <h1 class="centrado">Aspiraciones</h1>
+      <hr>
+      <p>Desde los 17 años, he estado estudiando programación, y me gustaría convertirme en un gran desarrollador y programador. Aunque no tengo un lenguaje específico o enfoque en este campo, me interesa mucho leer y aprender más sobre varios temas en la nueva tecnología y cómo nos ayuda en nuestra vida diaria.</p>
+      <p>Actualmente, estoy enfocado en la programación competitiva y el desarrollo de juegos. Aunque este último es más personal y menos comercial, sigue siendo un vasto mundo para el desarrollo de la programación.</p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="cuadro">
+      <hr>
+      <h1 class="centrado">Acerca de Modelado y Animación</h1>
+      <hr>
+      <p>Como se mencionó anteriormente, he trabajado en el desarrollo de videojuegos. Vale la pena señalar que al trabajar en videojuegos, una parte significativa del trabajo no se trata tanto de programación, sino más bien de diseñar y animar personajes, así como de la creatividad visual detrás de ello. Me atrevería a decir que es casi un 70% de arte visual y un 30% de código.</p>
+      <p>Es importante destacar que los desarrolladores de juegos pueden tener diversas habilidades, incluyendo programación, diseño gráfico, animación, sonido, narrativa y más. Pueden trabajar en una variedad de roles, desde programadores y diseñadores de niveles hasta artistas y escritores.</p>
+      <p>Aunque es un campo competitivo debido a la alta demanda y la pasión que muchos tienen por los videojuegos, el número de desarrolladores de juegos sigue siendo sustancial y continúa creciendo a medida que la industria evoluciona.</p>
+      <div class="imagencentrada">
+        <!-- Imagen tomada del sitio web oficial de Blender -->
+        <img src="https://www.blender.org/wp-content/uploads/2020/02/udim-05.jpg" alt="" class="img_blender">
+      </div>
+      <p class="centrado"><em><b>"La imaginación es más importante que el conocimiento. El conocimiento está limitado, mientras que la imaginación abarca el mundo." - Albert Einstein</b></em></p>
+    </div>
+  </div>
+  <audio id="sonidoClicBoton" src="buttonclick.mp3"></audio>
+  <footer>
+    <div class="centrar">
+      <hr>
+      <h1 class="centrado">Código Maleficarius</h1>
+      <hr>
+      <p class="centrado">En esta página web, te introducirás en todo tipo de blogs interesantes sobre tecnología, características de frameworks, tutoriales, bibliotecas y toda mi historia como desarrollador.</p>
+      <p>Esta página no tiene errores y está completamente hecha utilizando HTML, JavaScript y CSS sin ningún framework.</p>
+      <div class="programing_lenguages_images">
+        <a href="https://jigsaw.w3.org/css-validator/validator?uri=maleficariuscode.tech&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en" target="_blank">
+          <img class="w3c" src="./imagenes/validcss.png" alt="¡CSS válido!">
+        </a>
+        <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fmaleficariuscode.tech%2F" target="_blank">
+          <img class="w3c" src="./imagenes/validhtml.png" alt="¡HTML válido!">
+        </a>
+      </div>
+      <p class="centrado">Contáctame si tienes un proyecto en mente.</p>
+      <div class="programing_lenguages_images">
+        <a href="">
+          <!-- Icono basado en Google Images -->
+          <img id="imagen" src="./imagenes/github.webp" alt="" class="contact_image" onmouseover="cambiarRuta(1,1,this)" onmouseout="cambiarRuta(1,2,this)">
+        </a>
+        <a href="">
+          <!-- Icono basado en Google Images-->
+          <img id="imagen2" src="./imagenes/email.webp" alt="" class="contact_image" onmouseover="cambiarRuta(2,1,this)" onmouseout="cambiarRuta(2,2,this)">
+        </a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

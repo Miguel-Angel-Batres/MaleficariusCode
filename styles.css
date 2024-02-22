@@ -80,6 +80,7 @@ a{
 }
 .cuadro_blogs{
     text-align: center;
+    overflow: hidden;
     background-color:#111111;
     box-shadow: 4px 4px 2px 1px #000000;
     padding: 10px;
@@ -89,12 +90,17 @@ a{
     max-width: 20rem;
     flex: 0 0 calc(10% - 20px);
     color:#BFBFBF;
+    z-index: 500;
+}
+.cuadro_blogs h1{
+  transition: color 0.5s ease;
 }
 
 .blog_imagen{
   width: calc(100%);
   height: calc(65%);
 }
+
 .page_imagen{
   width: calc(80%);
   height: auto;
@@ -151,7 +157,8 @@ a{
   font-size: 2em;
   text-align: center;
   color:  #e0e0d8;
-  margin: 10px auto 5rem auto;
+  margin: 5rem auto 5rem auto;
+  z-index: 500;
 }
  
 .a_blog:hover h1{

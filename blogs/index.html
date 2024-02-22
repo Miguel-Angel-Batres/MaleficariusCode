@@ -12,15 +12,17 @@
 <link rel="icon" href="https://www.gifsanimados.org/data/media/1662/sombrero-de-bruja-y-hechicero-imagen-animada-0016.gif" id="favicon">
 <script src="snake.js" defer></script> 
 <script src="dropdown.js" defer></script> 
-  <script src="prism.js"></script>
+  <script src="prism.js"></script><script src="cookies.js"></script>
 </head>
 <body>
   <div class="navbar">  
   <div class="logo">
 <a href="/">    <img src="./imagenes/logo.webp" alt="Logo" class="logo_imagen">
 </a>    </div>
-    <div class="opciones">  
-    
+    <div class="opciones">    <button type="button" onclick="toggleLanguage(this)" class="lengbutton">Spanish</button>
+  
+      
+       
       <div class="dropdown" id="dropdown">
         <button class="dropbtn" onclick="toggleDropdown()">Menu</button>
         <div class="dropdown-content" id="dropdownContent">
@@ -43,25 +45,35 @@
     <div class="container">
         <div class="cuadro_blogs">
           <!-- Image Taked from cdn1.epicgames.com web site-->
-          <a href="./blogs/godotdevelopment/" class="a_blog">
+            <a href="./blogs/godotdevelopment/" class="a_blog">
             <img src="https://godotengine.org/assets/share-image.webp" alt="" class="blog_imagen">
             <h1>Godot Development</h1>
             </a>
+
         </div>
-        <div class="cuadro_blogs">
-          <!-- Image Taked from bs-uploads.toptal.io web site-->
-          <a href="./blogs/competitiveprogramming/" class="a_blog">
-            <img src="https://bs-uploads.toptal.io/blackfish-uploads/components/blog_post_page/content/cover_image_file/cover_image/1309433/regular_1708x683_pasted_image_0-6d578bc0a35bd7ca53dcf70403e3f5d5.png" alt="" class="blog_imagen">
-            <h1>Competitive Programming</h1>
-            </a>
-        </div>
-        <div class="cuadro_blogs">
-          <!-- Image Taked from www.lffl.org web site-->
-           <a href="ArchAdventures.html"></a>
-            <img src="https://www.lffl.org/wp-content/uploads/2021/03/arch-linux.png" alt="" class="blog_imagen">
-            <h1>ArchLinux Adventures <b>Coming Soon</b></h1>
-        </div>
+       
     </div>
+    <div class="container">
+      <div class="titulo">
+        <h1>In Progress Blogs</h1>
+        <hr>
+      </div>
+      </div>
+      <div class="container">
+      <div class="cuadro_blogs">
+        <!-- Image Taked from bs-uploads.toptal.io web site-->
+        <a href="./blogs/competitiveprogramming/" class="a_blog">
+          <img src="https://bs-uploads.toptal.io/blackfish-uploads/components/blog_post_page/content/cover_image_file/cover_image/1309433/regular_1708x683_pasted_image_0-6d578bc0a35bd7ca53dcf70403e3f5d5.png" alt="" class="blog_imagen">
+          <h1>Competitive Programming</h1>
+          </a>
+      </div>
+      <div class="cuadro_blogs">
+        <!-- Image Taked from www.lffl.org web site-->
+         <a href="ArchAdventures.html"></a>
+          <img src="https://www.lffl.org/wp-content/uploads/2021/03/arch-linux.png" alt="" class="blog_imagen">
+          <h1>ArchLinux Adventures</h1>
+      </div>
+      </div>
    <!-- <div class="container">
         <div class="cuadro_blogs">
             <img src="" alt="">

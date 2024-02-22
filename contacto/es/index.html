@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <base href="../../../">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maleficarius Code</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="prism.css">
+  <!--<link href="themes/prism-ghcolors.css" rel="stylesheet"/>-->
+  <!-- Icono tomado de la página web oficial de Gifsanimados.org -->
+  <link rel="icon" href="https://www.gifsanimados.org/data/media/1662/sombrero-de-bruja-y-hechicero-imagen-animada-0016.gif" id="favicon">
+  <script src="snake.js" defer></script> 
+  <script src="dropdown.js" defer></script> 
+  <script src="prism.js"></script><script src="cookies.js"></script>
+</head>
+<body>
+  <div class="navbar">  
+    <div class="logo">
+      <a href="/es">    
+        <img src="./imagenes/logo.webp" alt="Logo" class="logo_imagen">
+      </a>    
+    </div>
+    <div class="opciones">    <button type="button" onclick="toggleLanguage(this)" class="lengbutton">Inglés</button>
+  
+      <div class="dropdown" id="dropdown">
+        <button class="dropbtn" onclick="toggleDropdown()">Menú</button>
+        <div class="dropdown-content" id="dropdownContent">
+          <a href="/es">Inicio</a>
+          <a href="./blogs/es">Blogs</a>
+          <a href="./proyectos/es">Proyectos</a>
+          <a href="./contacto/es">Contáctame</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <img src="./imagenes/perfil.gif" alt="GIF animado" class="moving-gif">
+
+  <div class="container">
+    <div class="titulo">
+      <h1>Contáctame</h1>
+      <hr>
+    </div>
+  </div>
+  <div class="container">
+    <div class="cuadro_blogs">
+      <!-- Imagen tomada del sitio web cdn1.epicgames.com -->
+      <img src="https://cdn-icons-png.flaticon.com/512/1624/1624008.png" alt="" class="blog_imagen">
+      <h1>Trabajando en ello</h1>
+    </div>
+  </div>
+
+  <audio id="sonidoClicBoton" src="buttonclick.mp3"></audio>
+  <footer>
+    <div class="centrar">
+      <hr>
+      <h1 class="centrado">Maleficarius Code</h1>
+      <hr>
+      <p class="centrado">En esta página web, te introducirás en todo tipo de blogs interesantes 
+        sobre tecnología, características de frameworks, tutoriales, bibliotecas y toda mi historia como desarrollador.
+      </p>
+      <p>Esta página no tiene errores y está totalmente hecha utilizando HTML, JavaScript y CSS sin ningún framework.
+      </p>
+      <div class="programing_lenguages_images">
+        <a href="https://jigsaw.w3.org/css-validator/validator?uri=maleficariuscode.tech&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en" target="_blank">
+          <img class="w3c" src="./imagenes/validcss.png" alt="¡CSS válido!">
+        </a>
+        <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fmaleficariuscode.tech%2F" target="_blank">
+          <img class="w3c" src="./imagenes/validhtml.png" alt="¡HTML válido!">
+        </a>
+      </div>
+      <p class="centrado">Contáctame si tienes un proyecto en mente</p>
+      <div class="programing_lenguages_images">
+        <a href="" class="contenedor_imagen">
+          <img id="imagen"src="./imagenes/github.webp" alt="" class="contact_image" onmouseover="cambiarRuta(1,1,this)" onmouseout="cambiarRuta(1,2,this)">
+        </a>
+        <a href="" class="contenedor_imagen">
+          <img id="imagen2"src="./imagenes/email.webp" alt="" class="contact_image"  onmouseover="cambiarRuta(2,1,this)" onmouseout="cambiarRuta(2,2,this)">
+        </a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

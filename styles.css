@@ -23,6 +23,7 @@
   padding: 0px 15px 0px 15px;
   text-decoration: none;
   font-size: 20px;
+  transition: background-color 0.5s ease;
 }
 .dropbtn img {
   margin-right: 10px;
@@ -44,7 +45,7 @@
   border-style: none dashed dashed dashed;
   border-color: #c0c0c0;
   opacity: 0; 
-  transition: opacity 0.3s ease; 
+  transition: opacity 0.5s ease; 
   z-index: 900;
 }
 
@@ -54,6 +55,7 @@
   align-items: center;
   margin: 10px 0px 10px 0px;
   font-size: 20px;
+  transition: background-color 0.5s ease;
 }
 .dropdown-content a img {
   margin-right: 10px;
@@ -144,6 +146,7 @@ a {
   margin-top: 12px;
   margin-bottom: 10px;
   padding: 0px 10px 2px 10px;
+  transition:background-color 0.5s ease;
 }
 .lengbutton:hover {
   background-color: #191919;
@@ -328,7 +331,7 @@ footer {
 .contact_image {
   width: 50px;
   height: auto;
-  transition: transform 0.3s;
+  transition: transform 0.5s;
   margin: 0px 5px 0px 5px;
 }
 .contact_image:hover {
@@ -337,7 +340,7 @@ footer {
 .w3c {
   width: auto;
   height: 3em;
-  transition: transform 0.3s;
+  transition: transform 0.5s;
 }
 .w3c:hover {
   transform: scale(1.25);

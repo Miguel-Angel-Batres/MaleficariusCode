@@ -1,188 +1,283 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Maleficarius Code</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="prism.css">
-  <!--<link href="themes/prism-ghcolors.css" rel="stylesheet"/>-->
-  <!-- Icon Taked From Gifsanimados.org oficial website -->
-<link rel="icon" href="https://www.gifsanimados.org/data/media/1662/sombrero-de-bruja-y-hechicero-imagen-animada-0016.gif" id="favicon">
-<script src="snake.js" defer></script> 
-<script src="dropdown.js" defer></script>
-<script src="cookies.js" defer></script>
-  <script src="prism.js"></script>
-</head>
-<body>
-  <div class="navbar">  
-  <div class="logo">
-    <!-- Hat Based on Google Images-->
-<a href="/">    <img src="./imagenes/logo.webp" alt="Logo" class="logo_imagen">
-</a>    </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maleficarius Code</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="prism.css" />
+    <!--<link href="themes/prism-ghcolors.css" rel="stylesheet"/>-->
+    <!-- Icon Taked From Gifsanimados.org oficial website -->
+    <link
+      rel="icon"
+      href="https://www.gifsanimados.org/data/media/1662/sombrero-de-bruja-y-hechicero-imagen-animada-0016.gif"
+      id="favicon"
+    />
+    <script src="snake.js" defer></script>
+    <script src="dropdown.js" defer></script>
+    <script src="cookies.js" defer></script>
+    <script src="prism.js"></script>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="logo">
+        <!-- Hat Based on Google Images-->
+        <a href="/">
+          <img src="./imagenes/logo.webp" alt="Logo" class="logo_imagen" />
+        </a>
+      </div>
 
-    <div class="opciones">    <button type="button" onclick="toggleLanguage(this)" class="lengbutton">Spanish</button>
+      <div class="opciones">
+        <button type="button" onclick="toggleLanguage(this)" class="lengbutton">
+          Spanish
+        </button>
 
-      <!--<p class="lenguage"ß>en</p>
+        <!--<p class="lenguage"ß>en</p>
    <label class="switch">
            <input type="checkbox" id="checkbox">
            <span class="slider round"></span>
     </label>  -->
-      <div class="dropdown" id="dropdown">
-        <button class="dropbtn" onclick="toggleDropdown()">Menu</button>
-        <div class="dropdown-content" id="dropdownContent">
-          <a href="/">Home</a>
-          <a href="./blogs/">Blogs</a>
-          <a href="./proyectos/">Proyects</a>
-         <a href="./contacto/">Contact me</a>
+        <div class="dropdown" id="dropdown">
+          <button class="dropbtn" onclick="toggleDropdown()">
+            <img src="./imagenes/menu-4-16.png" alt="" />Menu
+          </button>
+          <div class="dropdown-content" id="dropdownContent">
+            <a href="/"><img src="./imagenes/house-16.png" alt="" />Home</a>
+            <a href="./blogs/"
+              ><img src="./imagenes/paint-brush-16.png" alt="" />Blogs</a
+            >
+            <a href="./proyectos/"
+              ><img src="./imagenes/settings-18-16.png" alt="" />Proyects</a
+            >
+            <a href="./contacto/"
+              ><img src="./imagenes/email-12-16.png" alt="" />Contact me</a
+            >
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <img src="imagenes/perfil.gif" alt="GIF animado" class="moving-gif">
-  <div class="container">
-    <div class="cuadro">
-    
-    <div class="perfil">
-    <!-- Image Based on Google Images -->
-    <img src="/imagenes/perfil.gif" alt="Photo" class="fotoperfil">
-    <h1>My Picture</h1>
+    <img src="imagenes/perfil.gif" alt="GIF animado" class="moving-gif" />
+    <div class="container">
+      <div class="cuadro">
+        <div class="perfil">
+          <!-- Image Based on Google Images -->
+          <img src="/imagenes/perfil.gif" alt="Photo" class="fotoperfil" />
+          <h1>My Picture</h1>
+        </div>
+        <hr />
+        <h1 class="centrado">About me</h1>
+        <hr />
+        <p>
+          Hello, I am Miguel Angel Batres Luna. I am 20 years old and I am a
+          student of Computer Systems Engineering at the Autonomous University
+          of Aguascalientes, Mexico. I enjoy programming and editing things. I
+          am a fan of video games and most branches of programming. Nowadays, I
+          work with various programming languages, especially C, C++, Java,
+          JavaScript, Python, HTML, CSS, among others.
+        </p>
+        <p>
+          This little ghost you can see here is called "LostSoul." I took its
+          image from the PNGWING Official Website, and it represents me on this
+          website. As you can see, LostSoul is flying around this website,
+          searching for something, but it doesn't seem to know what it is
+          looking for. It will be with you while you're here, so be nice to it.
+        </p>
+      </div>
     </div>
-    <hr>
-    <h1 class="centrado">About me</h1>
-    <hr>
-    <p>Hello, I am Miguel Angel Batres Luna. I am 20 years old and I am a student of Computer Systems Engineering at the Autonomous University 
-      of Aguascalientes, Mexico. I enjoy programming and editing things. 
-      I am a fan of video games and most branches of programming. Nowadays, 
-      I work with various programming languages, especially C, C++, Java, JavaScript, 
-      Python, HTML, CSS, among others.</p>
-      <p>This little ghost you can see here is called "LostSoul." 
-        I took its image from the PNGWING Official Website, 
-        and it represents me on this website. As you can see,
-         LostSoul is flying around this website, searching for something,
-          but it doesn't seem to know what it is looking for. 
-          It will be with you while you're here, so be nice to it.</p>
-
-
-    
-    </div>
-  </div>
-  <div class="container">
-    <div class="cuadro">  
-      <hr>
-    <h1 class="centrado">Skills</h1>  
-    <hr>
-    <p>I work on various projects, specializing in video games, websites, 
-      competitive programming, and databases. I also work 
-      with different operating systems, with Linux being my main
-         programming environment.</p>
-      <p class="centrado">Programming Lenguages:</p>
+    <div class="container">
+      <div class="cuadro">
+        <hr />
+        <h1 class="centrado">Skills</h1>
+        <hr />
+        <p>
+          I work on various projects, specializing in video games, websites,
+          competitive programming, and databases. I also work with different
+          operating systems, with Linux being my main programming environment.
+        </p>
+        <p class="centrado">Programming Lenguages:</p>
         <!-- Images Taked From Google Images -->
         <div class="programing_lenguages_images">
-        <img src="/imagenes/c-.png" alt="" class="c_imagen">
-        <img src="/imagenes/html-5.png" alt="" class="c_imagen">
-        <img src="/imagenes/java.png" alt="" class="c_imagen">
-        <img src="/imagenes/secuencia-de-comandos-de-java.png" alt="" class="c_imagen">
+          <img src="/imagenes/c-.png" alt="" class="c_imagen" />
+          <img src="/imagenes/html-5.png" alt="" class="c_imagen" />
+          <img src="/imagenes/java.png" alt="" class="c_imagen" />
+          <img
+            src="/imagenes/secuencia-de-comandos-de-java.png"
+            alt=""
+            class="c_imagen"
+          />
+        </div>
+        <p class="centrado">Development Software I Use:</p>
+        <div class="programing_lenguages_images">
+          <!-- Images Taked From Google Images -->
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Godot_icon.svg/2048px-Godot_icon.svg.png"
+            alt=""
+            class="c_imagen"
+          />
+          <img
+            src="https://icons.iconarchive.com/icons/papirus-team/papirus-apps/512/nvim-icon.png"
+            alt=""
+            class="c_imagen"
+          />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/5/56/VSCodium_Logo.png"
+            alt=""
+            class="c_imagen"
+          />
+          <img
+            src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png"
+            alt=""
+            class="c_imagen"
+          />
+          <img
+            src="https://static-00.iconduck.com/assets.00/android-studio-icon-486x512-zp9um7zl.png"
+            alt=""
+            class="c_imagen"
+          />
+        </div>
+        <p class="centrado">Operating Systems:</p>
+        <div class="programing_lenguages_images">
+          <!-- Images Taked From Google Images -->
+          <img
+            src="https://cdn1.iconfinder.com/data/icons/operating-system-flat-1/30/windows_7-512.png"
+            alt=""
+            class="c_imagen"
+          />
+          <img
+            src="https://cdn.iconscout.com/icon/free/png-256/free-archlinux-3629222-3030532.png"
+            alt=""
+            class="c_imagen"
+          />
+          <img
+            src="https://static-00.iconduck.com/assets.00/ubuntu-plain-icon-256x256-we4d4gd0.png"
+            alt=""
+            class="c_imagen"
+          />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Finder_Icon_macOS_Big_Sur.png"
+            alt=""
+            class="c_imagen"
+          />
+        </div>
       </div>
-       <p class="centrado">Development Software I Use:</p>
-       <div class="programing_lenguages_images">
-        <!-- Images Taked From Google Images -->
-       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Godot_icon.svg/2048px-Godot_icon.svg.png" alt="" class="c_imagen">
-        <img src="https://icons.iconarchive.com/icons/papirus-team/papirus-apps/512/nvim-icon.png" alt="" class="c_imagen">
-       <img src="https://upload.wikimedia.org/wikipedia/commons/5/56/VSCodium_Logo.png" alt="" class="c_imagen">
-       <img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" alt="" class="c_imagen">
-       <img src="https://static-00.iconduck.com/assets.00/android-studio-icon-486x512-zp9um7zl.png" alt="" class="c_imagen">
-
-      </div>
-      <p class="centrado">Operating Systems:</p>
-      <div class="programing_lenguages_images">
-        <!-- Images Taked From Google Images -->
-      <img src="https://cdn1.iconfinder.com/data/icons/operating-system-flat-1/30/windows_7-512.png" alt="" class="c_imagen">
-      <img src="https://cdn.iconscout.com/icon/free/png-256/free-archlinux-3629222-3030532.png" alt="" class="c_imagen">
-      <img src="https://static-00.iconduck.com/assets.00/ubuntu-plain-icon-256x256-we4d4gd0.png" alt="" class="c_imagen">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Finder_Icon_macOS_Big_Sur.png" alt="" class="c_imagen">
-     </div>
     </div>
-  </div>
-  <div class="container">
-    <div class="cuadro">
-      <hr>
-    <h1 class="centrado">Aspirations</h1>
-    <hr>
-      <p>Since I was 17 years old, I have been studying programming, and one day I would like to become 
-        a great developer and programmer. Although I don't have a specific
-         language or focus in this field, I am very interested in reading
-          and learning more about 
-        various topics in new technology and how it helps us on a daily basis.</p>
+    <div class="container">
+      <div class="cuadro">
+        <hr />
+        <h1 class="centrado">Aspirations</h1>
+        <hr />
         <p>
-        Currently, I am focused on competitive programming and game development. 
-        Although the latter is more personal and less commercial, 
-        it remains a vast world for programming development.</p>
+          Since I was 17 years old, I have been studying programming, and one
+          day I would like to become a great developer and programmer. Although
+          I don't have a specific language or focus in this field, I am very
+          interested in reading and learning more about various topics in new
+          technology and how it helps us on a daily basis.
+        </p>
+        <p>
+          Currently, I am focused on competitive programming and game
+          development. Although the latter is more personal and less commercial,
+          it remains a vast world for programming development.
+        </p>
+      </div>
     </div>
-  </div>
-  <div class="container">
-    <div class="cuadro">
-      <hr>
-    <h1 class="centrado">About Modeling And Animation</h1>
-    <hr>
-      <p>As mentioned earlier, I have worked in video game development. 
-        It's worth noting that when working on video games, a significant 
-        part of the work is not so much about programming, but rather about 
-        designing and animating characters, as well as the visual 
-        artistry behind it. I dare say it's almost 70% visual art and 30% code.</p>
-        <p>It's important to note that game developers can have diverse skills, 
-          including programming, graphic design, animation, sound, narrative, and more.
-           They can work in a variety of roles, ranging from programmers and level designers 
-           to artists and writers.</p>
-      <p>While it is a competitive field due to high demand and the passion that many 
-        have for video games, the number of game
-         developers remains substantial and continues to grow as the industry evolves.</p>
-      <div class="imagencentrada">
-        <!-- image taked from oficial blender's web site -->
-         <img src="https://www.blender.org/wp-content/uploads/2020/02/udim-05.jpg" alt="" class="img_blender">
+    <div class="container">
+      <div class="cuadro">
+        <hr />
+        <h1 class="centrado">About Modeling And Animation</h1>
+        <hr />
+        <p>
+          As mentioned earlier, I have worked in video game development. It's
+          worth noting that when working on video games, a significant part of
+          the work is not so much about programming, but rather about designing
+          and animating characters, as well as the visual artistry behind it. I
+          dare say it's almost 70% visual art and 30% code.
+        </p>
+        <p>
+          It's important to note that game developers can have diverse skills,
+          including programming, graphic design, animation, sound, narrative,
+          and more. They can work in a variety of roles, ranging from
+          programmers and level designers to artists and writers.
+        </p>
+        <p>
+          While it is a competitive field due to high demand and the passion
+          that many have for video games, the number of game developers remains
+          substantial and continues to grow as the industry evolves.
+        </p>
+        <div class="imagencentrada">
+          <!-- image taked from oficial blender's web site -->
+          <img
+            src="https://www.blender.org/wp-content/uploads/2020/02/udim-05.jpg"
+            alt=""
+            class="img_blender"
+          />
         </div>
-        <p class="centrado"><em><b>"Imagination is more important than knowledge. Knowledge is limited, whereas imagination embraces the world." - Albert Einstein</b></em></p>
-        </div>
-  </div>
-  <audio id="sonidoClicBoton" src="buttonclick.mp3"></audio>
-  <footer>
-
-    <div class="centrar">
-      <hr>
-      <h1 class="centrado">Maleficarius Code</h1>
-      <hr>
-        <p class="centrado">In this Web Page You Will introduce in all kind of interesting blogs 
-          about technology, framework's features, tutorials, libraries, and my whole developer history.
-          </p>
-          <p>This page has no errors and is totally made by using html,javascript and css without any frameworks.
-            </p>
-            <div class="programing_lenguages_images">
-              <a href="https://jigsaw.w3.org/css-validator/validator?uri=maleficariuscode.tech&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en" target="_blank">
-                <img class="w3c" src="./imagenes/validcss.png" alt="Valid CSS!">
-            </a>
-            <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fmaleficariuscode.tech%2F" target="_blank">
-              <img class="w3c" src="./imagenes/validhtml.png" alt="Valid CSS!">
+        <p class="centrado">
+          <em
+            ><b
+              >"Imagination is more important than knowledge. Knowledge is
+              limited, whereas imagination embraces the world." - Albert
+              Einstein</b
+            ></em
+          >
+        </p>
+      </div>
+    </div>
+    <audio id="sonidoClicBoton" src="buttonclick.mp3"></audio>
+    <footer>
+      <div class="centrar">
+        <hr />
+        <h1 class="centrado">Maleficarius Code</h1>
+        <hr />
+        <p class="centrado">
+          In this Web Page You Will introduce in all kind of interesting blogs
+          about technology, framework's features, tutorials, libraries, and my
+          whole developer history.
+        </p>
+        <p>
+          This page has no errors and is totally made by using html,javascript
+          and css without any frameworks.
+        </p>
+        <div class="programing_lenguages_images">
+          <a
+            href="https://jigsaw.w3.org/css-validator/validator?uri=maleficariuscode.tech&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en"
+            target="_blank"
+          >
+            <img class="w3c" src="./imagenes/validcss.png" alt="Valid CSS!" />
           </a>
-            </div>
+          <a
+            href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fmaleficariuscode.tech%2F"
+            target="_blank"
+          >
+            <img class="w3c" src="./imagenes/validhtml.png" alt="Valid CSS!" />
+          </a>
+        </div>
 
         <p class="centrado">Contact me if you have a proyect in mind</p>
         <div class="programing_lenguages_images">
           <a href="">
-          <!-- Icon Based On Github Google Images -->
-          <img id="imagen" src="./imagenes/github.webp" alt="" class="contact_image" onmouseover="cambiarRuta(1,1,this)" onmouseout="cambiarRuta(1,2,this)">
+            <!-- Icon Based On Github Google Images -->
+            <img
+              id="imagen"
+              src="./imagenes/github.webp"
+              alt=""
+              class="contact_image"
+              onmouseover="cambiarRuta(1,1,this)"
+              onmouseout="cambiarRuta(1,2,this)"
+            />
           </a>
           <a href="">
-          <!-- Icon Based On Email Google Images-->
-          <img id="imagen2" src="./imagenes/email.webp" alt="" class="contact_image"  onmouseover="cambiarRuta(2,1,this)" onmouseout="cambiarRuta(2,2,this)">
+            <!-- Icon Based On Email Google Images-->
+            <img
+              id="imagen2"
+              src="./imagenes/email.webp"
+              alt=""
+              class="contact_image"
+              onmouseover="cambiarRuta(2,1,this)"
+              onmouseout="cambiarRuta(2,2,this)"
+            />
           </a>
-          
         </div>
-
-
-    </div>
-   
-  </footer>
-  
-</body>
-
+      </div>
+    </footer>
+  </body>
 </html>

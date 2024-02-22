@@ -50,11 +50,4 @@
           }, 300);
         }
       }
-      const sonidoClicBoton = document.getElementById('sonidoClicBoton');
       
-      document.body.addEventListener('click', (event) => {
-        if (sonidoClicBoton !== null) {
-          sonidoClicBoton.play();
-          }  
-          
-      });

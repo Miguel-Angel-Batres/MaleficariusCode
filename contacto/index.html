@@ -18,6 +18,16 @@
     <script src="./js/dropdown.js" defer></script>
     <script src="./js/prism.js"></script>
     <script src="./js/cookies.js"></script>
+    <script src="./js/email.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+              publicKey: "7osMLn7ukEh-tOB6F",
+            });
+        })();
+    </script>
   </head>
   <body>
     <div class="navbar">
@@ -58,62 +68,28 @@
         <hr />
       </div>
     </div>
-    <div class="container">
-      <div class="cuadro_blogs">
-        <!-- Image Taked from cdn1.epicgames.com web site-->
-        <img
-          src="https://cdn-icons-png.flaticon.com/512/1624/1624008.png"
-          alt=""
-          class="blog_imagen"
-        />
-        <h1>Working on it</h1>
-      </div>
-    </div>
-    <!-- <div class="container">
-        <div class="cuadro_blogs">
-            <img src="" alt="">
-            <h1>blog1</h1>
-        </div>
-        <div class="cuadro_blogs">
-            <img src="" alt="">
-            <h1>blog1</h1>
-        </div>
-        <div class="cuadro_blogs">
-            <img src="" alt="">
-            <h1>blog1</h1>
-        </div>
-    </div>
-    <div class="container">
-        <div class="cuadro_blogs">
-            <img src="" alt="">
-            <h1>blog1</h1>
-        </div>
-        <div class="cuadro_blogs">
-            <img src="" alt="">
-            <h1>blog1</h1>
-        </div>
-        <div class="cuadro_blogs">
-            <img src="" alt="">
-            <h1>blog1</h1>
-        </div>
-    </div>
-    <div class="container">
-        <div class="cuadro_blogs">
-            <img src="" alt="">
-            <h1>blog1</h1>
-        </div>
-        <div class="cuadro_blogs">
-            <img src="" alt="">
-            <h1>blog1</h1>
-        </div>
-        <div class="cuadro_blogs">
-            <img src="" alt="">
-            <h1>blog1</h1>
-        </div>
-    </div>
--->
 
-    <audio id="sonidoClicBoton" src="buttonclick.mp3"></audio>
+<div class="container">
+  <div class="cuadro">
+    <div class="form">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" required></textarea>
+    <h3 class="success" id="success"></h3>
+    <button type="submit" id="submit"onclick="sendEmail()">Submit</button>
+
+    </div>
+  </div>
+</div>
+    
+
+
+    
     <footer>
       <div class="centrar">
         <hr />

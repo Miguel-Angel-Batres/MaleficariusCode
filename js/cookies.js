@@ -90,3 +90,4 @@ function fetchCurrentSiteLanguage(){
 function getDefaultLanguage(){
     return navigator.language.substring(0, 2);
 }
+

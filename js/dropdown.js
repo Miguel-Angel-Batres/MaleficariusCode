@@ -39,6 +39,20 @@
           }, 300);
         }
       }
+      function toggleDropup() {
+        var dropdownContent = document.getElementById("dropup-content");
+        if (dropdownContent.style.display === "none" || dropdownContent.style.display === "") {
+          dropdownContent.style.display = "block";
+          setTimeout(function() {
+            dropdownContent.style.opacity = "1";
+          }, 0);
+        } else {
+          dropdownContent.style.opacity = "0";
+          setTimeout(function() {
+            dropdownContent.style.display = "none";
+          }, 300);
+        }
+      }
     
       window.onclick = function(event) {
         var dropdown = document.getElementById("dropdown");

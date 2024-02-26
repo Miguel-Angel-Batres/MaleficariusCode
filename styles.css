@@ -6,6 +6,12 @@
   position: relative;
   display: inline-block;
 }
+.content{
+  z-index: 1000;
+  position:fixed;
+  top:88.5%;
+  left: 5.7%;
+}
 .moving-gif {
   position: fixed;
   top: 50px;
@@ -63,9 +69,82 @@
   height: auto;
 }
 .dropdown-content a:hover {
-  background-color: #191919;
+  background-color: #111111;
+}
+ .dropbtn2 {
+  background-color: #0a0a0a;
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 15px;
+  border-color: #0a0a0a;
+  transition: background-color 0.5s ease;
+
 }
 
+.dropup {
+  position:relative;
+  display:inline-block;
+}
+
+.dropup-content {
+  border-radius: 20px;
+  display: none;
+  transition: display 0.5s ease;
+  position: absolute;
+  margin-bottom: 20px;
+  bottom: 100%;
+  left: -50%;
+  background-color: #111111;
+  min-width: 170px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.dropup-content.show {
+  display: block;
+  transition: display 0.5s ease;
+}
+
+.dropup {
+  position: relative;
+  display: inline-block;
+}
+
+
+
+.dropup-content {
+  border-radius: 20px;
+  display:none;
+  transition: display 0.5 easy;
+  position: absolute;
+  margin-bottom: 20px;
+  bottom: 100%;
+  left:-50%;
+  background-color: #111111;
+  min-width: 170px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.dropup-content.show{
+  display:block;
+}
+
+.dropup-content a {
+  color: #e0e0d8;
+  padding: 10px 16px;
+  text-decoration: none;
+  transition: background-color 0.5s ease;
+
+  display: block;
+}
+
+.dropup-content a:hover {background-color: #191919}
+
+
+.dropbtn2:hover {
+  border-color: #2f2f2f;
+  background-color: #2f2f2f;
+} 
 body {
   padding-top: calc(10%);
   background-color: #191919;

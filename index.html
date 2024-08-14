@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
-    <title>Maleficarius Code</title>
-    <link rel="stylesheet" href="styles.css" >
+    <title>BL Dev</title>
+    <link id="theme-style" rel="stylesheet" href="css/light-theme.css" >
     <link rel="stylesheet" href="prism.css" >
     <!--<link href="themes/prism-ghcolors.css" rel="stylesheet">-->
     <!-- Icon Taked From Gifsanimados.org oficial website -->
@@ -15,6 +15,7 @@
     >
     <script src="./js/snake.js" defer></script>
     <script src="./js/prism.js"></script>
+    <script src="./js/dropdown.js"></script>
     <script src="./js/cookies.js"></script>
   </head>
   <body>
@@ -22,13 +23,25 @@
       <div class="logo">
         <!-- Hat Based on Google Images-->
         <a href="/">
-          <img src="./imagenes/logo.webp" alt="Logo" class="logo_imagen" >
+          <h1 class="logo_text">BL dev</h1>
         </a>
       </div>
 
       <div class="opciones">
+        <!-- Experiencias -->
+        <button type="button"class="lengbutton" href="">
+          Experiences
+        </button>
+        <!-- Estudios -->
+        <button type="button" class="lengbutton" href="">
+          Studies
+        </button>
         <button type="button" onclick="toggleLanguage(this)" class="lengbutton">
-          Spanish
+          Lenguages
+        </button>
+        <!-- tema -->
+        <button id="theme-button" type="button" onclick="toggleTheme()" class="lengbutton">
+          Light Mode
         </button>
       </div>
     </div>
@@ -36,27 +49,30 @@
     <div class="content">
       
     </div>
-    <div class="container" id="s1">
-      <div class="cuadro">
-        <hr>
-        <h1 class="centrado">Welcome to Maleficarius Code</h1>
-        <hr>
-        <p>
-          Welcome to my personal website. Here you will find all kinds of
-          interesting blogs about technology, framework's features, tutorials,
-          libraries, and my whole developer history.
-        </p>
-        <p>
-          This page has no errors and is totally made by using html, javascript,
-          and css without any frameworks.
-        </p>
-        <p>
-          I hope you enjoy your stay here. If you have any questions or
-          suggestions, feel free to contact me.
-        </p>
-      </div>
+    <div class="contact">
+      <a href="https://github.com/Miguel-Angel-Batres" target="_blank">
+        <!-- Icon Based On Github Google Images -->
+        <img
+          id="imagen"
+          src="./imagenes/githubrojo.webp"
+          alt=""
+          class="contact_image"
+          onmouseover="cambiarRuta(1,1,this)"
+          onmouseout="cambiarRuta(1,2,this)"
+        >
+      </a>
+      <a href="">
+        <!-- Icon Based On Email Google Images-->
+        <img
+          id="imagen2"
+          src="./imagenes/emailrojo.webp"
+          alt=""
+          class="contact_image"
+          onmouseover="cambiarRuta(2,1,this)"
+          onmouseout="cambiarRuta(2,2,this)"
+        >
+      </a>
     </div>
-
     <div class="container" id="s2">
       <div class="cuadro">
         <div class="perfil">
@@ -65,7 +81,7 @@
           <h1>My Picture</h1>
         </div>
         <hr>
-        <h1 class="centrado">About me</h1>
+        <h1 class="centrado">Hi there!</h1>
         <hr>
         <p>
           Hello, I am Miguel Angel Batres Luna. I am 20 years old and I am a
@@ -73,7 +89,7 @@
           of Aguascalientes, Mexico. I enjoy programming and editing things. I
           am a fan of video games and most branches of programming. Nowadays, I
           work with various programming languages, especially C, C++, Java,
-          JavaScript, Python, HTML, CSS, among others.
+          JavaScript, Python, among others.
         </p>
         <p>
           This little ghost you can see here is called "LostSoul." I took its
@@ -98,7 +114,6 @@
         <!-- Images Taked From Google Images -->
         <div class="programing_lenguages_images">
           <img src="/imagenes/c-.png" alt="" class="c_imagen" >
-          <img src="/imagenes/html-5.png" alt="" class="c_imagen" >
           <img src="/imagenes/java.png" alt="" class="c_imagen" >
           <img
             src="/imagenes/secuencia-de-comandos-de-java.png"
@@ -122,68 +137,15 @@
           technology and how it helps us on a daily basis.
         </p>
         <p>
-          Currently, I am focused on competitive programming and game
-          development. Although the latter is more personal and less commercial,
+          Currently, I am focused on competitive programming, game
+          development and fullstack development. Although the latter is more personal and less commercial,
           it remains a vast world for programming development.
         </p>
       </div>
     </div>
      
     <footer>
-      <div class="centrar">
-        <hr>
-        <h1 class="centrado">Maleficarius Code</h1>
-        <hr>
-        <p class="centrado">
-          In this Web Page You Will introduce in all kind of interesting blogs
-          about technology, framework's features, tutorials, libraries, and my
-          whole developer history.
-        </p>
-        <p>
-          This page has no errors and is totally made by using html,javascript
-          and css without any frameworks.
-        </p>
-        <div class="programing_lenguages_images">
-          <a
-            href="https://jigsaw.w3.org/css-validator/validator?uri=maleficariuscode.tech&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en"
-            target="_blank"
-          >
-            <img class="w3c" src="./imagenes/validcss.png" alt="Valid CSS!" >
-          </a>
-          <a
-            href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fmaleficariuscode.tech%2F"
-            target="_blank"
-          >
-            <img class="w3c" src="./imagenes/validhtml.png" alt="Valid CSS!" >
-          </a>
-        </div>
-
-        <p class="centrado">Contact me if you have a proyect in mind</p>
-        <div class="programing_lenguages_images">
-          <a href="https://github.com/Miguel-Angel-Batres" target="_blank">
-            <!-- Icon Based On Github Google Images -->
-            <img
-              id="imagen"
-              src="./imagenes/github.webp"
-              alt=""
-              class="contact_image"
-              onmouseover="cambiarRuta(1,1,this)"
-              onmouseout="cambiarRuta(1,2,this)"
-            >
-          </a>
-          <a href="">
-            <!-- Icon Based On Email Google Images-->
-            <img
-              id="imagen2"
-              src="./imagenes/email.webp"
-              alt=""
-              class="contact_image"
-              onmouseover="cambiarRuta(2,1,this)"
-              onmouseout="cambiarRuta(2,2,this)"
-            >
-          </a>
-        </div>
-      </div>
+     
     </footer>
   </body>
 </html>

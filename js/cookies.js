@@ -34,7 +34,6 @@ function switchLanguage(lang) {
     let path = fetchCurrentPath();
     setCookies('language', lang, 30);
     let newPath;
-
     if (path.endsWith('/') === true) {
         if (lang === 'es') {
             newPath = path + 'es';

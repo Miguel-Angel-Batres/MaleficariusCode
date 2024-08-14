@@ -4,11 +4,11 @@
     <base href="../" >
     <meta charset="UTF-8" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
-    <title>Maleficarius Code</title>
-    <link rel="stylesheet" href="styles.css" >
+    <title>BL Dev</title>
+    <link id="theme-style" rel="stylesheet" href="css/light-theme.css" >
     <link rel="stylesheet" href="prism.css" >
     <!--<link href="themes/prism-ghcolors.css" rel="stylesheet">-->
-    <!-- Icono tomado del sitio web oficial de Gifsanimados.org -->
+    <!-- Icono tomado del sitio oficial de Gifsanimados.org -->
     <link
       rel="icon"
       href="https://www.gifsanimados.org/data/media/1662/sombrero-de-bruja-y-hechicero-imagen-animada-0016.gif"
@@ -16,173 +16,120 @@
     >
     <script src="./js/snake.js" defer></script>
     <script src="./js/prism.js"></script>
+    <script src="./js/dropdown.js"></script>
     <script src="./js/cookies.js"></script>
   </head>
   <body>
     <div class="navbar">
       <div class="logo">
-        <!-- Sombrero basado en imágenes de Google -->
-        <a href="/es">
-          <img src="./imagenes/logo.webp" alt="Logo" class="logo_imagen" >
+        <!-- Sombrero basado en Google Imágenes -->
+        <a href="/">
+          <h1 class="logo_text">BL dev</h1>
         </a>
       </div>
 
       <div class="opciones">
+        <!-- Experiencias -->
+        <button type="button" class="lengbutton" href="">
+          Experiencias
+        </button>
+        <!-- Estudios -->
+        <button type="button" class="lengbutton" href="">
+          Estudios
+        </button>
         <button type="button" onclick="toggleLanguage(this)" class="lengbutton">
-          Inglés
+          Idiomas
+        </button>
+        <!-- Tema -->
+        <button id="theme-button" type="button" onclick="toggleTheme()" class="lengbutton">
+          Modo Claro
         </button>
       </div>
     </div>
     <img src="imagenes/perfil.gif" alt="GIF animado" class="moving-gif" >
-    <div class="container">
-      <div class="cuadro">
-        <hr>
-        <h1 class="centrado">Bienvenido a Maleficarius Code</h1>
-        <hr>
-        <p>
-          Bienvenido a mi sitio web personal. Aquí encontrarás todo tipo de blogs interesantes sobre tecnología, características de frameworks, tutoriales, bibliotecas y toda mi historia como desarrollador.
-        </p>
-        <p>
-          Esta página no tiene errores y está totalmente hecha utilizando html, javascript y css sin ningún framework.
-        </p>
-        <p>
-          Espero que disfrutes tu estadía aquí. Si tienes alguna pregunta o sugerencia, no dudes en contactarme.
-        </p>
-      </div>
+    <div class="content">
+      
     </div>
-    <div class="container">
+    <div class="contact">
+      <a href="https://github.com/Miguel-Angel-Batres" target="_blank">
+        <!-- Icono basado en Google Imágenes de Github -->
+        <img
+          id="imagen"
+          src="./imagenes/githubrojo.webp"
+          alt="Github"
+          class="contact_image"
+          onmouseover="cambiarRuta(1,1,this)"
+          onmouseout="cambiarRuta(1,2,this)"
+        >
+      </a>
+      <a href="">
+        <!-- Icono basado en Google Imágenes de Email -->
+        <img
+          id="imagen2"
+          src="./imagenes/emailrojo.webp"
+          alt="Email"
+          class="contact_image"
+          onmouseover="cambiarRuta(2,1,this)"
+          onmouseout="cambiarRuta(2,2,this)"
+        >
+      </a>
+    </div>
+    <div class="container" id="s2">
       <div class="cuadro">
         <div class="perfil">
-          <!-- Imagen basada en imágenes de Google -->
+          <!-- Imagen basada en Google Imágenes -->
           <img src="/imagenes/perfil.gif" alt="Foto" class="fotoperfil" >
           <h1>Mi Foto</h1>
         </div>
         <hr>
-        <h1 class="centrado">Acerca de mí</h1>
+        <h1 class="centrado">¡Hola!</h1>
         <hr>
         <p>
-          Hola, soy Miguel Ángel Batres Luna. Tengo 20 años y soy estudiante de
-          Ingeniería en Sistemas Computacionales en la Universidad Autónoma de
-          Aguascalientes, México. Disfruto programando y editando cosas. Soy
-          fanático de los videojuegos y de la mayoría de las ramas de la
-          programación. En la actualidad, trabajo con varios lenguajes de
-          programación, especialmente C, C++, Java, JavaScript, Python, HTML,
-          CSS, entre otros.
+          Hola, soy Miguel Ángel Batres Luna. Tengo 20 años y estudio Ingeniería en Sistemas Computacionales en la Universidad Autónoma de Aguascalientes, México. Disfruto programar y editar cosas. Soy fan de los videojuegos y de la mayoría de las ramas de la programación. Actualmente, trabajo con varios lenguajes de programación, especialmente C, C++, Java, JavaScript, Python, entre otros.
         </p>
         <p>
-          Este pequeño fantasma que puedes ver aquí se llama "Alma En Pena".
-          Tomé su imagen del sitio web oficial de PNGWING, y el me representa en
-          este sitio web. Como puedes ver, Alma En Pena está volando alrededor
-          de este sitio web, buscando algo, pero no parece saber el qué. Estará
-          contigo mientras estés aquí, así que sé amable con él.
+          Este pequeño fantasma que ves aquí se llama "LostSoul". Tomé su imagen del sitio oficial de PNGWING, y me representa en este sitio web. Como puedes ver, LostSoul está volando por el sitio, buscando algo, pero parece no saber qué busca. Estará contigo mientras estés aquí, así que sé amable con él.
         </p>
       </div>
     </div>
-    <div class="container">
+    <div class="container" id="s3">
       <div class="cuadro">
         <hr>
         <h1 class="centrado">Habilidades</h1>
         <hr>
         <p>
-          Trabajo en varios proyectos, especializándome en videojuegos, sitios
-          web, programación competitiva y bases de datos. También trabajo con
-          diferentes sistemas operativos, siendo Linux mi entorno principal de
-          programación.
+          Trabajo en varios proyectos, especializándome en videojuegos, sitios web, programación competitiva y bases de datos. También trabajo con diferentes sistemas operativos, siendo Linux mi entorno principal de programación.
         </p>
         <p class="centrado">Lenguajes de Programación:</p>
-        <!-- Imágenes tomadas de Google Images -->
+        <!-- Imágenes tomadas de Google Imágenes -->
         <div class="programing_lenguages_images">
-          <img src="/imagenes/c-.png" alt="" class="c_imagen" >
-          <img src="/imagenes/html-5.png" alt="" class="c_imagen" >
-          <img src="/imagenes/java.png" alt="" class="c_imagen" >
+          <img src="/imagenes/c-.png" alt="C" class="c_imagen" >
+          <img src="/imagenes/java.png" alt="Java" class="c_imagen" >
           <img
             src="/imagenes/secuencia-de-comandos-de-java.png"
-            alt=""
+            alt="Java Commands"
             class="c_imagen"
           >
         </div>
-        
+    
       </div>
     </div>
-    <div class="container">
+    <div class="container" id="s4">
       <div class="cuadro">
         <hr>
         <h1 class="centrado">Aspiraciones</h1>
         <hr>
         <p>
-          Desde los 17 años, he estado estudiando programación, y me gustaría
-          convertirme en un gran desarrollador y programador. Aunque no tengo un
-          lenguaje específico o enfoque en este campo, me interesa mucho leer y
-          aprender más sobre varios temas en la nueva tecnología y cómo nos
-          ayuda en nuestra vida diaria.
+          Desde los 17 años, he estado estudiando programación, y algún día me gustaría convertirme en un gran desarrollador y programador. Aunque no tengo un lenguaje específico o un enfoque en este campo, estoy muy interesado en leer y aprender más sobre varios temas en nueva tecnología y cómo nos ayuda a diario.
         </p>
         <p>
-          Actualmente, estoy enfocado en la programación competitiva y el
-          desarrollo de juegos. Aunque este último es más personal y menos
-          comercial, sigue siendo un vasto mundo para el desarrollo de la
-          programación.
+          Actualmente, estoy enfocado en programación competitiva, desarrollo de juegos y desarrollo fullstack. Aunque este último es más personal y menos comercial, sigue siendo un vasto mundo para el desarrollo de programación.
         </p>
       </div>
     </div>
-  
+     
     <footer>
-      <div class="centrar">
-        <hr>
-        <h1 class="centrado">Maleficarius Code</h1>
-        <hr>
-        <p class="centrado">
-          En esta página web, te introducirás en todo tipo de blogs interesantes
-          sobre tecnología, características de frameworks, tutoriales,
-          bibliotecas y toda mi historia como desarrollador.
-        </p>
-        <p>
-          Esta página no tiene errores y está completamente hecha utilizando
-          HTML, JavaScript y CSS sin ningún framework.
-        </p>
-        <div class="programing_lenguages_images">
-          <a
-            href="https://jigsaw.w3.org/css-validator/validator?uri=maleficariuscode.tech&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en"
-            target="_blank"
-          >
-            <img class="w3c" src="./imagenes/validcss.png" alt="¡CSS válido!" >
-          </a>
-          <a
-            href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fmaleficariuscode.tech%2F"
-            target="_blank"
-          >
-            <img
-              class="w3c"
-              src="./imagenes/validhtml.png"
-              alt="¡HTML válido!"
-            >
-          </a>
-        </div>
-        <p class="centrado">Contáctame si tienes un proyecto en mente.</p>
-        <div class="programing_lenguages_images">
-          <a href="https://github.com/Miguel-Angel-Batres" target="_blank">
-            <!-- Icono basado en Google Images -->
-            <img
-              id="imagen"
-              src="./imagenes/github.webp"
-              alt=""
-              class="contact_image"
-              onmouseover="cambiarRuta(1,1,this)"
-              onmouseout="cambiarRuta(1,2,this)"
-            >
-          </a>
-          <a href="">
-            <!-- Icono basado en Google Images-->
-            <img
-              id="imagen2"
-              src="./imagenes/email.webp"
-              alt=""
-              class="contact_image"
-              onmouseover="cambiarRuta(2,1,this)"
-              onmouseout="cambiarRuta(2,2,this)"
-            >
-          </a>
-        </div>
-      </div>
+     
     </footer>
   </body>
 </html>

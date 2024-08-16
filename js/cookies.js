@@ -1,92 +1,71 @@
-
-function setCookies(name, value, days) {
-    const expires = new Date();
-    expires.setTime(expires.getTime() + days * 24 * 60 * 60 * 1000);
-    const sameSite = ';SameSite=None';
-    const secure = ';Secure'; /*because of HTTPS*/
-    document.cookie = name + '=' + value  + ';expires=' + expires.toUTCString() + ';path=/' + sameSite + secure;
-}
-
-
-function getCookies(name) {
-    const cookieName = name + "=";
-    const decodedCookie = decodeURIComponent(document.cookie);
-    const cookieArray = decodedCookie.split(';');
-    for (let i = 0; i < cookieArray.length; i++) {
-        let cookie = cookieArray[i];
-        while (cookie.charAt(0) === ' ') {
-            cookie = cookie.substring(1);
-        }
-        if (cookie.indexOf(cookieName) === 0) {
-            return cookie.substring(cookieName.length, cookie.length);
-        }
-    }
-    return "";
-}
-
-function cookieExists(name) {
-    if (getCookies(name) !== null) {
-        return true;
-    }
-    return false;
-}
-function switchLanguage(lang) {
-    let path = fetchCurrentPath();
-    setCookies('language', lang, 30);
-    let newPath;
-    if (path.endsWith('/') === true) {
-        if (lang === 'es') {
-            newPath = path + 'es';
-        } else {
-            newPath = path.replace('es/', '');
-        }
-    } else if (path.endsWith('index.html') === true) { 
-        if (lang === 'es') {
-            newPath = path.replace('/index.html', '/es/index.html');
-        } else {
-            newPath = path.replace('/es/index.html', '/index.html');
-        }
-    }
-    if(newPath !== undefined){
-        window.location.href = newPath;
-    }
-}
-
-function oppositeLanguage(lang) {
-    if (lang === 'en') {
-        return 'es';
-    }
-    return 'en';
-}
-
-function toggleLanguage(button) {
-    button.disabled = true;
-    let currentLang;
-    if ( cookieExists('language') ) {
-        currentLang = getCookies('language');
+document.addEventListener('DOMContentLoaded', () => {
+    setStoredtheme();
+});
+// localstorage theme
+function getStoredtheme(){
+    var theme = localStorage.getItem('theme');
+    if(theme == 'dark'){
+        return 'dark';
     } else { 
-        currentLang = fetchCurrentSiteLanguage();
+        return 'light';
     }
-
-    switchLanguage(oppositeLanguage(currentLang));    
-    setTimeout(function() {
-        button.disabled = false;
-    }, 500);
 }
-
-function fetchCurrentPath(){
-    return window.location.pathname;
-}
-
-function fetchCurrentSiteLanguage(){
-    let currentPath = fetchCurrentPath();
-    if(currentPath.endsWith('/es/') || currentPath.endsWith('/es/index.html')){
-        return 'es';
+function setStoredtheme(){
+    var theme = localStorage.getItem('theme');
+    if(theme == 'dark'){
+        document.getElementById('theme-style').href = 'css/light-theme.css';
+        localStorage.setItem('theme', 'light');
+    } else {
+        document.getElementById('theme-style').href = 'css/dark-theme.css';
+        localStorage.setItem('theme', 'dark');
     }
-    return 'en';
-}
+    var theme = document.getElementById('theme-style');
+    var themeButton = document.getElementById('theme-button');
 
-function getDefaultLanguage(){
-    return navigator.language.substring(0, 2);
+    if(theme.getAttribute('href') == 'css/dark-theme.css'){
+        if(localStorage.getItem('language') == 'es'){
+            themeButton.textContent = 'Modo Claro';
+        } else {
+            themeButton.textContent = 'Light Mode';
+        }
+    } else {
+        if(localStorage.getItem('language') == 'es'){
+            themeButton.textContent = 'Modo Oscuro';
+        } else {
+            themeButton.textContent = 'Dark Mode';
+        }
+    }
 }
-
+function changepath(){
+    let currentPath = window.location.pathname;
+    let params = window.location.search;
+    let newPath;
+    var language = localStorage.getItem('language');
+    console.log(language);
+    if (currentPath.endsWith('/') === true) {
+        if (language === 'es') {
+            newPath = currentPath + 'es';
+        } else {
+            newPath = currentPath.replace('es/', '');
+        }
+    } else if (currentPath.endsWith('index.html') === true) { /* for index.html (local developing) */
+        if (language === 'es') {
+            newPath = currentPath.replace('/index.html', '/es/index.html');
+        } else { /* en */
+            newPath = currentPath.replace('/es/index.html', '/index.html');
+        }
+    }
+    if (newPath !== undefined) {
+        window.location.href = newPath + params; // Append the query parameters to the new path
+    }
+    setStoredtheme();
+}
+function changelanguage(){
+    var language = localStorage.getItem('language');
+    if(language == 'en'){
+        localStorage.setItem('language', 'es');
+    } else {
+        localStorage.setItem('language', 'en');
+    }
+    changepath();
+}

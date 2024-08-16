@@ -163,14 +163,14 @@
       height: 2em !important;
     }
     .cuadro {
-      min-width: calc(70% + 2rem) !important;
-      max-width: calc(70% + 2rem) !important;
+      min-width: calc(65% + 2rem) !important;
+      max-width: calc(65% + 2rem) !important;
       text-align: center !important;
     }
     .navbar {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
+      display: flex;
+      flex-wrap:wrap;
+      justify-content: center;
       height: auto;
     }
     .titulo {

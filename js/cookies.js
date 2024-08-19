@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-    setStoredtheme();
+    var theme = localStorage.getItem('theme');
+    document.documentElement.setAttribute('data-theme', theme);
 });
 // localstorage theme
 function getStoredtheme(){
@@ -11,18 +12,18 @@ function getStoredtheme(){
     }
 }
 function setStoredtheme(){
-    var theme = localStorage.getItem('theme');
-    if(theme == 'dark'){
-        document.getElementById('theme-style').href = 'css/light-theme.css';
+ 
+    if(localStorage.getItem('theme') == 'dark'){
         localStorage.setItem('theme', 'light');
+        document.documentElement.setAttribute('data-theme', 'light');
     } else {
-        document.getElementById('theme-style').href = 'css/dark-theme.css';
         localStorage.setItem('theme', 'dark');
+        document.documentElement.setAttribute('data-theme', 'dark');
     }
     var theme = document.getElementById('theme-style');
     var themeButton = document.getElementById('theme-button');
 
-    if(theme.getAttribute('href') == 'css/dark-theme.css'){
+    if(localStorage.getItem('theme') == 'dark'){
         if(localStorage.getItem('language') == 'es'){
             themeButton.textContent = 'Modo Claro';
         } else {
@@ -35,6 +36,7 @@ function setStoredtheme(){
             themeButton.textContent = 'Dark Mode';
         }
     }
+   
 }
 function changepath(){
     let currentPath = window.location.pathname;
@@ -58,7 +60,6 @@ function changepath(){
     if (newPath !== undefined) {
         window.location.href = newPath + params; // Append the query parameters to the new path
     }
-    setStoredtheme();
 }
 function changelanguage(){
     var language = localStorage.getItem('language');

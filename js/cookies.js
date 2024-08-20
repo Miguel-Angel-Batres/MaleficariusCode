@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
     actualizaTheme();
 
 });
-// localstorage theme
 function getStoredtheme(){
     var theme = localStorage.getItem('theme');
     if(theme == 'dark'){
@@ -15,7 +14,7 @@ function getStoredtheme(){
 }
 function setStoredtheme(){
  
-    if(localStorage.getItem('theme') === 'dark'){
+    if(getStoredtheme() === 'dark'){
         localStorage.setItem('theme', 'light');
         document.documentElement.setAttribute('data-theme', 'light');
     } else {
@@ -28,7 +27,7 @@ function setStoredtheme(){
 function actualizaTheme(){
     var themeButton = document.getElementById('theme-button');
 
-    if(localStorage.getItem('theme') === 'dark'){
+    if(getStoredtheme() === 'dark'){
         if(localStorage.getItem('language') === 'es'){
             themeButton.textContent = 'Modo Claro';
         } else {

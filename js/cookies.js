@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     var theme = localStorage.getItem('theme');
     document.documentElement.setAttribute('data-theme', theme);
+    actualizaTheme();
+
 });
 // localstorage theme
 function getStoredtheme(){
@@ -13,30 +15,32 @@ function getStoredtheme(){
 }
 function setStoredtheme(){
  
-    if(localStorage.getItem('theme') == 'dark'){
+    if(localStorage.getItem('theme') === 'dark'){
         localStorage.setItem('theme', 'light');
         document.documentElement.setAttribute('data-theme', 'light');
     } else {
         localStorage.setItem('theme', 'dark');
         document.documentElement.setAttribute('data-theme', 'dark');
     }
-    var theme = document.getElementById('theme-style');
+    actualizaTheme();
+   
+}
+function actualizaTheme(){
     var themeButton = document.getElementById('theme-button');
 
-    if(localStorage.getItem('theme') == 'dark'){
-        if(localStorage.getItem('language') == 'es'){
+    if(localStorage.getItem('theme') === 'dark'){
+        if(localStorage.getItem('language') === 'es'){
             themeButton.textContent = 'Modo Claro';
         } else {
             themeButton.textContent = 'Light Mode';
         }
     } else {
-        if(localStorage.getItem('language') == 'es'){
+        if(localStorage.getItem('language') === 'es'){
             themeButton.textContent = 'Modo Oscuro';
         } else {
             themeButton.textContent = 'Dark Mode';
         }
     }
-   
 }
 function changepath(){
     let currentPath = window.location.pathname;
@@ -50,7 +54,7 @@ function changepath(){
         } else {
             newPath = currentPath.replace('es/', '');
         }
-    } else if (currentPath.endsWith('index.html') === true) { /* for index.html (local developing) */
+    } else if (currentPath.endsWith('index.html') === true) { 
         if (language === 'es') {
             newPath = currentPath.replace('/index.html', '/es/index.html');
         } else { /* en */
@@ -58,7 +62,7 @@ function changepath(){
         }
     }
     if (newPath !== undefined) {
-        window.location.href = newPath + params; // Append the query parameters to the new path
+        window.location.href = newPath + params;
     }
 }
 function changelanguage(){

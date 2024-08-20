@@ -11,7 +11,7 @@
 }
 [data-theme="dark"]{
   --background-color:#111111;
-  --text-color:#bfbfbf;
+  --text-color:#d9d9d9bf;
   --primary-color: #FF9802;
 }
 
@@ -19,7 +19,7 @@
     margin: 0px;
     padding: 0px;
   }
-  .opciones .dropdown {
+  .opciones{
     position: relative;
     display: inline-block;
   }
@@ -148,52 +148,7 @@
       margin-bottom: 10px;
     }
   }
-  .form{
-    display:grid;
-    place-items: center;
-  }
-  .form input, .form textarea{
-    margin: 10px 0px 10px 0px;
-    padding: 10px 15px 10px 15px;
-    border-radius: 5px;
-    border-style: none;
-    background-color: #2a2a2a;
-    color: #e0e0d8;
-    transition: background-color 0.5s ease;
-    
-  }
-  .form label{
-    margin: 10px 0px 10px 0px;
-    color: #e0e0d8;
-  
-  }
-  .form button{
-    margin: 30px 0px 10px 0px;
-    padding: 10px 15px 10px 15px;
-    border-radius: 5px;
-    border-style: none;
-    background-color: #2a2a2a;
-    color: #e0e0d8;
-    transition: background-color 0.5s ease;
-  
-  }
-  .form button:hover{
-    background-color: #414141;
-  }
-  .form input{
-    width: calc(40%);
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .form textarea{
-    width: calc(80%);
-    margin-left:auto;
-    margin-right:auto;
-    height: 15em;
-  }
-  .form input:hover, form textarea:hover{
-    background-color: #414141;
-  }
+
   .navbar .logo {
     width: auto;
     height: auto;
@@ -229,6 +184,7 @@
     min-width: 50rem;
     max-width: 50rem;
     z-index: 500;
+    color: var(--primary-color);
   }
   hr {
     margin: 5px 0px 5px 0px;
@@ -241,9 +197,10 @@
     margin-bottom: 5px;
   }
   .perfil {
-    border: 2px solid #dddcdc;
+    border: 2px solid var(--text-color);
     text-align: center;
     float: right;
+    color: var(--primary-color);
     margin-left: 20px;
     margin-right: 0px;
     padding: 15px 10px 0px 10px;
@@ -294,34 +251,11 @@
   .contact_image:hover {
     transform: scale(1.5);
   }
-  .w3c {
-    width: auto;
-    height: 3em;
-    transition: transform 0.5s;
-  }
-  .w3c:hover {
-    transform: scale(1.25);
-  }
-  .imagencentrada {
-    padding: 20px 0px 10px 0px;
-    margin: 20px 0px 10px 0px;
-    display: flex;
-    justify-content: center;
-  }
-  .img_blender {
-    width: calc(60%);
-    height: auto;
-  }
-  .centrado {
+  .centrado{
     text-align: center;
   }
-  .cuadro h1,
-  .centrar h1 {
-    color: var(--primary-color); 
-  }
-  .cuadro p,
-  .centrar p {
-    margin-top: 10px;
+  p{
     color: var(--text-color);
   }
+
   

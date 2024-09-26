@@ -1,8 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
     var movingGif = document.querySelector('.moving-gif');
     var direction = 0;
-    if(window.innerWidth < 768){
-      direction = 25;
+    if(window.innerWidth <= 768){
+      direction = 50;
+
     }else{
       direction = 70;
     }
@@ -13,7 +14,12 @@ document.addEventListener('DOMContentLoaded', function () {
     function moverGif() {
       var limiteDerecho = window.innerWidth;
       var limiteizquierdo = 0 - parseInt(getComputedStyle(movingGif).width);
-
+      var velocidady = 2;
+      if(window.innerWidth <= 768){
+        velocidady = 2;
+      }else{
+        velocidady = 4;
+      }
       // Cambiar la dirección si alcanza los límites
       var leftValue = parseInt(getComputedStyle(movingGif).left);
       var gifheight = parseInt(getComputedStyle(movingGif).height);
@@ -33,9 +39,9 @@ document.addEventListener('DOMContentLoaded', function () {
         movingGif.style.transform = "scaleX(-1)";
       }
       if(arriba){
-        movingGif.style.top = parseInt(getComputedStyle(movingGif).top) - 4 + 'px';
+        movingGif.style.top = parseInt(getComputedStyle(movingGif).top) - velocidady + 'px';
       }else{
-        movingGif.style.top = parseInt(getComputedStyle(movingGif).top) + 4 + 'px';
+        movingGif.style.top = parseInt(getComputedStyle(movingGif).top) + velocidady + 'px';
       }
       movingGif.style.left = (leftValue + direction) + 'px'; 
     }

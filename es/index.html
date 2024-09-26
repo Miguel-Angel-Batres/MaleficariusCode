@@ -1,53 +1,150 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <base href="../" >
-    <meta charset="UTF-8" >
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <base href="../../../">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BL Dev</title>
-    <link id="theme-style" rel="stylesheet" href="css/styles.css" >
+    <link id="theme-style" rel="stylesheet" href="css/styles.css">
     <!--<link href="themes/prism-ghcolors.css" rel="stylesheet">-->
-    <!-- Icono tomado del sitio oficial de Gifsanimados.org -->
+    <!-- Icono tomado del sitio oficial Gifsanimados.org -->
     <link
       rel="icon"
-      href="https://www.gifsanimados.org/data/media/1662/sombrero-de-bruja-y-hechicero-imagen-animada-0016.gif"
+      href="/imagenes/perfil.gif"
       id="favicon"
     >
     <script src="./js/snake.js" defer></script>
-    <script src="./js/prism.js"></script>
-    <script src="./js/dropdown.js"></script>
     <script src="./js/cookies.js"></script>
   </head>
   <body>
     <div class="navbar">
       <div class="logo">
         <!-- Sombrero basado en Google Imágenes -->
-        <a href="/">
-          <h1 class="logo_text">BL dev</h1>
+        <a onclick="redirect('')">
+          <h1 class="logo_text">Miguel Angel Batres Luna</h1>
         </a>
       </div>
-
-      <div class="opciones">
+      <button type="button" class="menuboton" href="" id="menuboton">
+        Menú
+      </button>
+      <div class="opciones" id="opciones">
+       
         <!-- Experiencias -->
-        <button type="button" class="lengbutton" href="">
-          Experiencias
-        </button>
+        <button type="button" class="lengbutton" onclick="redirect('proyectos')">
+          Proyectos
+      </button>
         <!-- Estudios -->
-        <button type="button" class="lengbutton" href="">
-          Estudios
+        <button type="button" class="lengbutton" onclick="redirect('hobbies')">
+          Pasatiempos
         </button>
         <button type="button" onclick="changelanguage()" class="lengbutton">
           Idioma Inglés
         </button>
-        <!-- Tema -->
+        <!-- tema -->
         <button id="theme-button" type="button" onclick="setStoredtheme()" class="lengbutton">
-          Modo Oscuro
+          Modo oscuro
         </button>
       </div>
     </div>
-    <img src="imagenes/perfil.gif" alt="GIF animado" class="moving-gif" >
+    <img src="imagenes/perfil.gif" alt="GIF animado" class="moving-gif">
     <div class="content">
       
+    </div>
+  
+    <div class="container">
+      <div class="cuadro">
+        <div class="perfil">
+          <!-- Imagen basada en Google Imágenes -->
+          <img src="/imagenes/perfil.gif" alt="Foto" class="fotoperfil">
+          <h1>Mi Foto</h1>
+        </div>
+        <hr>
+        <h1 class="centrado">¡Hola!</h1>
+        <hr>
+        <p>
+          Hola, soy Miguel Ángel Batres Luna.
+          Tengo 20 años y estoy estudiando Ingeniería en Sistemas Computacionales en la Universidad Autónoma de Aguascalientes, México.
+          Disfruto programar y editar cosas. Soy fan de los videojuegos y de la mayoría de las ramas de la programación.
+          Actualmente, trabajo con varios lenguajes de programación, especialmente C, C++, Java, JavaScript, entre otros.
+        </p>
+        <p>
+          Este pequeño fantasma que ves aquí se llama "Fantasmón". Tomé su imagen del sitio oficial PNGWING,
+          y me representa en este sitio web. Como puedes ver, Fantasmón está volando por el sitio, buscando algo,
+          pero parece que no sabe qué está buscando. Estará contigo mientras estés aquí, así que sé amable con él.
+        </p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="cuadro">
+        <hr>
+        <h1 class="centrado">Habilidades</h1>
+        <hr>
+        <p>
+          Trabajo en varios proyectos, especializándome en videojuegos y sitios web.
+          También tengo conocimientos de varios sistemas operativos, como Windows y 
+          muchas distribuciones basadas en Linux y UNIX.
+        </p>
+        <p class="centrado">Lenguajes de Programación:</p>
+        <!-- Imágenes tomadas de Google Imágenes -->
+        <div class="programing_lenguages_images">
+          <img src="/imagenes/c-.png" alt="C" class="c_imagen">
+          <img src="/imagenes/java.png" alt="Java" class="c_imagen">
+          <img
+            src="/imagenes/secuencia-de-comandos-de-java.png"
+            alt="Comandos de Java"
+            class="c_imagen"
+          >
+        </div>
+    
+      </div>
+    </div>
+    <div class="container">
+      <div class="cuadro">
+        <hr>
+        <h1 class="centrado">Aspiraciones</h1>
+        <hr>
+        <p>
+          Desde que tengo 17 años, he estado estudiando programación, y algún día me gustaría convertirme en un gran desarrollador y programador. Aunque no tengo un lenguaje o enfoque específico en este campo,
+          estoy muy interesado en leer y aprender más sobre varios temas en nueva tecnología y cómo nos ayuda diariamente.
+        </p>
+        <p>
+          Actualmente, estoy enfocado en mis estudios y en aprender, tratando de convertirme en profesional en el desarrollo de juegos y en desarrollo fullstack.
+          Aunque el lado de los videojuegos es más personal y menos comercial, sigue siendo un vasto mundo para el desarrollo de programación y algo que disfruto mucho.
+        </p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="cuadro">
+        <hr>
+        <h1 class="centrado">Contáctame</h1>
+        <hr>
+        <p class="centrado">Contáctame si tienes un proyecto en mente o estás buscando mis servicios</p>
+        
+        <section class="form">
+          <!-- Etiqueta para formulario -->
+          
+          <form>
+            <div class="info">
+                <label>Nombre</label>
+                <input type ="text" placeholder="Introduce tu nombre...">
+            </div>
+            <div class="info">
+                <label>Número</label>
+                <input type="text" placeholder="Introduce tu teléfono...">
+            </div>
+            <div class="info">
+                <label>Correo electrónico</label>
+                <input type="email" placeholder="Introduce tu correo electrónico...">
+            </div>
+            <div class="message_contact">
+                <label>Mensaje</label>
+                <textarea style="resize: vertical; max-height: 12rem;" placeholder="Introduce tu mensaje..."></textarea>
+                <div>
+                    <button type="submit">Enviar</button>
+              </div>
+              </div>
+          </form>
+  </section>
     </div>
     <div class="contact">
       <a href="https://github.com/Miguel-Angel-Batres" target="_blank">
@@ -55,78 +152,20 @@
         <img
           id="imagen"
           src="./imagenes/githubrojo.webp"
-          alt="Github"
+          alt=""
           class="contact_image"
-          onmouseover="cambiarRuta(1,1,this)"
-          onmouseout="cambiarRuta(1,2,this)"
         >
       </a>
       <a href="">
-        <!-- Icono basado en Google Imágenes de Email -->
+        <!-- Icono basado en Google Imágenes de correo electrónico -->
         <img
           id="imagen2"
           src="./imagenes/emailrojo.webp"
-          alt="Email"
+          alt=""
           class="contact_image"
-          onmouseover="cambiarRuta(2,1,this)"
-          onmouseout="cambiarRuta(2,2,this)"
         >
       </a>
     </div>
-    <div class="container" id="s2">
-      <div class="cuadro">
-        <div class="perfil">
-          <!-- Imagen basada en Google Imágenes -->
-          <img src="/imagenes/perfil.gif" alt="Foto" class="fotoperfil" >
-          <h1>Mi Foto</h1>
-        </div>
-        <hr>
-        <h1 class="centrado">¡Hola!</h1>
-        <hr>
-        <p>
-          Hola, soy Miguel Ángel Batres Luna. Tengo 20 años y estudio Ingeniería en Sistemas Computacionales en la Universidad Autónoma de Aguascalientes, México. Disfruto programar y editar cosas. Soy fan de los videojuegos y de la mayoría de las ramas de la programación. Actualmente, trabajo con varios lenguajes de programación, especialmente C, C++, Java, JavaScript, Python, entre otros.
-        </p>
-        <p>
-          Este pequeño fantasma que ves aquí se llama "Fantasmón". Tomé su imagen del sitio oficial de PNGWING, y me representa en este sitio web. Como puedes ver, Fantasmón está volando por el sitio, buscando algo, pero parece no saber qué busca. Estará contigo mientras estés aquí, así que sé amable con él.
-        </p>
-      </div>
-    </div>
-    <div class="container" id="s3">
-      <div class="cuadro">
-        <hr>
-        <h1 class="centrado">Habilidades</h1>
-        <hr>
-        <p>
-          Trabajo en varios proyectos, especializándome en videojuegos, sitios web, programación competitiva y bases de datos. También trabajo con diferentes sistemas operativos, siendo Linux mi entorno principal de programación.
-        </p><br>
-        <p class="centrado">Lenguajes de Programación:</p>
-        <!-- Imágenes tomadas de Google Imágenes -->
-        <div class="programing_lenguages_images">
-          <img src="/imagenes/c-.png" alt="C" class="c_imagen" >
-          <img src="/imagenes/java.png" alt="Java" class="c_imagen" >
-          <img
-            src="/imagenes/secuencia-de-comandos-de-java.png"
-            alt="Java Commands"
-            class="c_imagen"
-          >
-        </div>
-    
-      </div>
-    </div>
-    <div class="container" id="s4">
-      <div class="cuadro">
-        <hr>
-        <h1 class="centrado">Aspiraciones</h1>
-        <hr>
-        <p>
-          Desde los 17 años, he estado estudiando programación, y algún día me gustaría convertirme en un gran desarrollador y programador. Aunque no tengo un lenguaje específico o un enfoque en este campo, estoy muy interesado en leer y aprender más sobre varios temas en nueva tecnología y cómo nos ayuda a diario.
-        </p>
-        <p>
-          Actualmente, estoy enfocado en programación competitiva, desarrollo de juegos y desarrollo fullstack. Aunque este último es más personal y menos comercial, sigue siendo un vasto mundo para el desarrollo de programación.
-        </p>
-      </div>
-    </div>
-     
     <footer>
      
     </footer>

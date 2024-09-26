@@ -1,132 +1,193 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
   <head>
-    <base href="../../" >
-    <meta charset="UTF-8" >
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
-    <title>Maleficarius Code</title>
-    <link rel="stylesheet" href="styles.css" >
-    <link rel="stylesheet" href="prism.css" >
+    <base href="../../">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BL Dev</title>
+    <link id="theme-style" rel="stylesheet" href="css/styles.css">
     <!--<link href="themes/prism-ghcolors.css" rel="stylesheet">-->
-    <!-- Icono tomado del sitio web oficial de gifsanimados.org -->
+    <!-- Icono tomado del sitio oficial Gifsanimados.org -->
     <link
       rel="icon"
-      href="https://www.gifsanimados.org/data/media/1662/sombrero-de-bruja-y-hechicero-imagen-animada-0016.gif"
+      href="/imagenes/perfil.gif"
       id="favicon"
     >
     <script src="./js/snake.js" defer></script>
-    <script src="./js/dropdown.js" defer></script>
-    <script src="./js/prism.js"></script>
     <script src="./js/cookies.js"></script>
   </head>
   <body>
     <div class="navbar">
       <div class="logo">
-        <a href="/es">
-          <img src="./imagenes/logo.webp" alt="Logo" class="logo_imagen" >
+        <!-- Sombrero basado en Google Images -->
+        <a onclick="redirect('')">
+          <h1 class="logo_text">Miguel Ángel Batres Luna</h1>
         </a>
       </div>
-      <div class="opciones">
-        <button type="button" onclick="toggleLanguage(this)" class="lengbutton">
-          Inglés
+      <button type="button" class="menuboton" href="" id="menuboton">
+        Menú
+      </button>
+      <div class="opciones" id="opciones">
+       
+        <!-- Proyectos -->
+        
+        <button type="button" class="lengbutton" onclick="redirect('proyectos')">
+          Proyectos
         </button>
-        <div class="dropdown" id="dropdown">
-          <button class="dropbtn" onclick="toggleDropdown()">
-            <img src="./imagenes/menu-4-16.png" alt="" >Menu
-          </button>
-          <div class="dropdown-content" id="dropdownContent">
-            <a href="/es"><img src="./imagenes/house-16.png" alt="" >Home</a>
-            <a href="./blogs/es"
-              ><img src="./imagenes/paint-brush-16.png" alt="" >Blogs</a
-            >
-            <a href="./proyectos/es"
-              ><img src="./imagenes/settings-18-16.png" alt="" >Proyects</a
-            >
-            <a href="./contacto/es"
-              ><img src="./imagenes/email-12-16.png" alt="" >Contact me</a
-            >
+        <!-- Hobbies -->
+        <button type="button" class="lengbutton" onclick="redirect('hobbies')">
+          Hobbies
+        </button>
+        <button type="button" onclick="changelanguage()" class="lengbutton">
+          Cambiar a Español
+        </button>
+        <!-- Tema -->
+        <button id="theme-button" type="button" onclick="setStoredtheme()" class="lengbutton">
+          Modo Oscuro
+        </button>
+      </div>
+    </div>
+    <img src="imagenes/perfil.gif" alt="GIF Animado" class="moving-gif">
+    <div class="content"></div>
+    <div class="container">
+      <div class="cuadro">
+        <hr>
+        <h1 class="centrado">Proyectos</h1>
+        <hr>
+      </div>
+    </div>
+    <div class="container">
+      <div class="cuadro">
+         <div class="proyecto">
+            <!-- Imagen basada en Google Images -->
+             <div>
+              <img src="imagenes/proyectozacatecas.jpeg" alt="Foto" class="fotoproyecto">
+             </div>
+            <div>
+            <hr>
+            <h1 class="centrado">Proyecto Zacatecas</h1>
+            <hr>
+              <p>
+                Proyecto Conjunto Zacatecas es un proyecto de desarrollo web que busca
+                promover un grupo musical en el estado de Zacatecas, México. El proyecto
+                se encuentra en desarrollo y se espera que esté listo antes de 2025.
+              </p>
+            </div>
           </div>
-        </div>
       </div>
     </div>
-    <img src="imagenes/perfil.gif" alt="GIF animado" class="moving-gif" >
+    <div class="container">
+      <div class="cuadro">
+         <div class="proyecto">
+            <!-- Imagen basada en Google Images -->
+             <div>
+              <img src="imagenes/retrodeath.jpeg" alt="Foto" class="fotoproyecto">
+             </div>
+            <div>
+            <hr>
+            <h1 class="centrado">Retro Death</h1>
+            <hr>
+              <p>
+                Retro Death es un juego hecho en Godot con gráficos similares a juegos de PSP
+                y con una jugabilidad parecida a los juegos de primera persona de los 90s. El juego
+                se encuentra en desarrollo y se espera que esté listo antes de 2025.
+              </p>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="cuadro">
+         <div class="proyecto">
+            <!-- Imagen basada en Google Images -->
+             <div>
+              <img src="imagenes/phantombeasts.jpeg" alt="Foto" class="fotoproyecto" style="width: 18rem;">
+             </div>
+            <div>
+            <hr>
+            <h1 class="centrado">Phantom Beasts</h1>
+            <hr>
+            
+              <p>
+                Phantom Beasts es un juego de terror y habilidad hecho en Godot con gráficos
+                simples para dispositivos móviles. El juego fue desarrollado por mí en 2023 y, aunque 
+                aún no está disponible, es un buen proyecto para aprender a programar en Godot.
+              </p>
+              
+              <p>
+                El juego consiste en esquivar a los fantasmas que aparecen en la pantalla,
+                moviendo al personaje por todo el mapa tratando de resistir el mayor tiempo posible.
+                Cuanto más tiempo aguantes, más rápido se mueven los fantasmas. Además,
+                el mismo juego guarda tu récord y te permite retar a otros a superarlo.
+              </p>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="cuadro">
+         <div class="proyecto">
+            <!-- Imagen basada en Google Images -->
+             <div>
+              <img src="imagenes/guitarhero1.jpeg" alt="Foto" class="fotoproyecto">
+             </div>
+            
+            <div>
+            <hr>
+            <h1 class="centrado">Guitar Meme</h1>
+            <hr>
+              <p>
+                Un videojuego hecho en Java que trata de ser lo más parecido a Guitar Hero, 
+                en el cual se incluyen tanto vídeos como música en forma de parodia, 
+                relacionando personajes poco comunes. Cuenta con un diseño muy simple
+                y una jugabilidad muy similar a la de Guitar Hero.
+              </p>
+              <p>
+                Este proyecto fue desarrollado por mí en 2023 y, aunque aún
+                no está disponible, es un buen proyecto para aprender a programar en Java.
+             </p>
+            </div>
+            
+          </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="cuadro">
+         <div class="proyecto">
+            <!-- Imagen basada en Google Images -->
+             <div>
+              <img src="imagenes/guitarhero3.jpeg" alt="Foto" class="fotoproyecto">
+             </div>
+             <div>
+              <img src="imagenes/guitarhero2.jpeg" alt="Foto" class="fotoproyecto">
+             </div>
+            
+          </div>
+      </div>
+    </div>
 
-    <div class="container">
-      <div class="titulo">
-        <h1>Proyectos</h1>
-        <hr>
-      </div>
-    </div>
-    <div class="container">
-      <div class="cuadro_blogs">
-        <!-- Imagen tomada del sitio de iconos de flaticon -->
+    <div class="contact">
+      <a href="https://github.com/Miguel-Angel-Batres" target="_blank">
+        <!-- Icono basado en Github de Google Images -->
         <img
-          src="https://cdn-icons-png.flaticon.com/512/1624/1624008.png"
+          id="imagen"
+          src="./imagenes/githubrojo.webp"
           alt=""
-          class="blog_imagen"
+          class="contact_image"
         >
-        <h1>Trabajando en ello</h1>
-      </div>
+      </a>
+      <a href="">
+        <!-- Icono basado en Email de Google Images -->
+        <img
+          id="imagen2"
+          src="./imagenes/emailrojo.webp"
+          alt=""
+          class="contact_image"
+        >
+      </a>
     </div>
-
-    
-
     <footer>
-      <div class="centrar">
-        <hr>
-        <h1 class="centrado">Maleficarius Code</h1>
-        <hr>
-        <p class="centrado">
-          En esta página web te introducirás a todo tipo de blogs interesantes
-          sobre tecnología, características de frameworks, tutoriales,
-          bibliotecas y toda mi historia como desarrollador.
-        </p>
-        <p>
-          Esta página no tiene errores y está totalmente hecha utilizando HTML,
-          JavaScript y CSS sin ningún framework.
-        </p>
-        <div class="programing_lenguages_images">
-          <a
-            href="https://jigsaw.w3.org/css-validator/validator?uri=maleficariuscode.tech&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en"
-            target="_blank"
-          >
-            <img class="w3c" src="./imagenes/validcss.png" alt="¡CSS válido!" >
-          </a>
-          <a
-            href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fmaleficariuscode.tech%2F"
-            target="_blank"
-          >
-            <img
-              class="w3c"
-              src="./imagenes/validhtml.png"
-              alt="¡HTML válido!"
-            >
-          </a>
-        </div>
-        <p class="centrado">Contáctame si tienes un proyecto en mente.</p>
-        <div class="programing_lenguages_images">
-          <a href="https://github.com/Miguel-Angel-Batres" target="_blank">
-            <img
-              id="imagen"
-              src="./imagenes/github.webp"
-              alt=""
-              class="contact_image"
-              onmouseover="cambiarRuta(1,1,this)"
-              onmouseout="cambiarRuta(1,2,this)"
-            >
-          </a>
-          <a href="" class="contenedor_imagen">
-            <img
-              id="imagen2"
-              src="./imagenes/email.webp"
-              alt=""
-              class="contact_image"
-              onmouseover="cambiarRuta(2,1,this)"
-              onmouseout="cambiarRuta(2,2,this)"
-            >
-          </a>
-        </div>
-      </div>
+     
     </footer>
   </body>
 </html>

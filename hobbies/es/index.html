@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <base href="../../../">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BL Dev</title>
+    <link id="theme-style" rel="stylesheet" href="css/styles.css">
+    <!--<link href="themes/prism-ghcolors.css" rel="stylesheet">-->
+    <!-- Icono tomado del sitio oficial Gifsanimados.org -->
+    <link
+      rel="icon"
+      href="/imagenes/perfil.gif"
+      id="favicon"
+    >
+    <script src="./js/snake.js" defer></script>
+    <script src="./js/cookies.js"></script>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="logo">
+        <!-- Sombrero basado en Google Imágenes -->
+        <a onclick="redirect('')">
+          <h1 class="logo_text">Miguel Angel Batres Luna</h1>
+        </a>
+      </div>
+      <button type="button" class="menuboton" href="" id="menuboton">
+        Menú
+      </button>
+      <div class="opciones" id="opciones">
+       
+        <!-- Experiencias -->
+        <button type="button" class="lengbutton" onclick="redirect('proyectos')">
+          Proyectos
+        </button>
+        <!-- Studies -->
+        <button type="button" class="lengbutton" onclick="redirect('hobbies')">
+          Pasatiempos
+        </button>
+        <button type="button" onclick="changelanguage()" class="lengbutton">
+          Idioma Inglés
+        </button>
+        <!-- tema -->
+        <button id="theme-button" type="button" onclick="setStoredtheme()" class="lengbutton">
+          Modo oscuro
+        </button>
+      </div>
+    </div>
+    <img src="imagenes/perfil.gif" alt="GIF animado" class="moving-gif">
+
+    <div class="container">
+      <div class="cuadro">
+        
+      </div>
+    </div>
+    <div class="container">
+      <div class="cuadro">
+        
+      </div>
+    </div>
+    
+    <div class="contact">
+      <a href="https://github.com/Miguel-Angel-Batres" target="_blank">
+        <!-- Icono basado en Google Imágenes de Github -->
+        <img
+          id="imagen"
+          src="./imagenes/githubrojo.webp"
+          alt=""
+          class="contact_image"
+        >
+      </a>
+      <a href="">
+        <!-- Icono basado en Google Imágenes de correo electrónico -->
+        <img
+          id="imagen2"
+          src="./imagenes/emailrojo.webp"
+          alt=""
+          class="contact_image"
+        >
+      </a>
+    </div>
+    <footer>
+     
+    </footer>
+  </body>
+</html>

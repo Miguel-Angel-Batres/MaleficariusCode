@@ -16,9 +16,9 @@ document.addEventListener('DOMContentLoaded', function () {
       var limiteizquierdo = 0 - parseInt(getComputedStyle(movingGif).width);
       var velocidady = 2;
       if(window.innerWidth <= 768){
-        velocidady = 2;
+        velocidady = 1;
       }else{
-        velocidady = 4;
+        velocidady = 2;
       }
       // Cambiar la dirección si alcanza los límites
       var leftValue = parseInt(getComputedStyle(movingGif).left);

@@ -24,7 +24,6 @@
         }
     });
     
-});
 window.addEventListener('resize', function() {
     const opciones = document.getElementById('opciones');
     if (window.innerWidth > 768) {
